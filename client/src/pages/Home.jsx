@@ -18,6 +18,29 @@ const Home = () => {
         number: "98%",
         description: "Client Satisfaction"
     }]
+    const industries = [
+        {
+            image: "/images/Home/Section4/IWS01.png",
+            description: "Federal Government Agencies"
+        },
+        {
+            image: "/images/Home/Section4/IWS02.png",
+            description: "State & Local Government"
+        },
+        {
+            image: "/images/Home/Section4/IWS03.png",
+            description: "Industrial & Manufacturing"
+        },{
+            image: "/images/Home/Section4/IWS04.png",
+            description: "Healthcare & Medical"
+        },{
+            image: "/images/Home/Section4/IWS05.png",
+            description: "Education & Public Sector"
+        },{
+            image: "/images/Home/Section4/IWS06.png",
+            description: "Enterprise & Corporate Clients"
+        }
+    ]
     return (
         <main>
             <section className='relative'>
@@ -123,7 +146,19 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section></section>
+            <section className='lg:px-0 px-9'>
+                <h2 className="text-[48px] flex justify-center mt-10">
+                    Industries We Serve
+                </h2>
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3 max-w-[1341px] mx-auto mt-10">
+                {industries.map((item, index) => (
+                    <div className="flex flex-col items-center">
+                        <img src={item.image} alt="industry" className='w-full h-[488px] rounded-[13px]'/>
+                        <p className='text-[#0B1422] text-[24px] text-center mt-2 mb-4'>{item.description}</p>
+                    </div>
+                ))}
+                 </div>   
+            </section>
         </main>
     )
 }
