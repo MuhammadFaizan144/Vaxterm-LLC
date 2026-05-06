@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <header className="flex justify-center">
       
-      <nav className="mt-6 absolute w-[90%] lg:w-[95%] flex items-center lg:justify-evenly justify-between lg:py-6 py-4 lg:px-6 px-10 lg:rounded-[100px] rounded-3xl bg-white z-50">
+      <nav className="mt-6 absolute w-[90%] lg:w-[95%] flex items-center lg:justify-evenly justify-around lg:py-6 py-4 lg:px-0 px-10 lg:rounded-[100px] rounded-3xl bg-white z-50">
 
         {/* Logo */}
         <img
