@@ -44,18 +44,25 @@ const Home = () => {
     const services = [
         {
             image: "/images/Home/Section3/back-in-time.png",
-            title:"Enterprise Hardware",
-            description:"High-performance IT infrastructure including enterprise servers"
-        },{
+            title: "Enterprise Hardware",
+            description: "High-performance IT infrastructure including enterprise servers"
+        }, {
             image: "/images/Home/Section3/back-in-time.png",
-            title:"Advanced Software Solutions",
-            description:"Scalable SaaS platforms including CRM, ERP"
-        },{
+            title: "Advanced Software Solutions",
+            description: "Scalable SaaS platforms including CRM, ERP"
+        }, {
             image: "/images/Home/Section3/back-in-time.png",
-            title:"Strategic Procurement",
-            description:"Global sourcing of specialized equipment, mission-critical assets, and logistics management"
+            title: "Strategic Procurement",
+            description: "Global sourcing of specialized equipment, mission-critical assets, and logistics management"
         }
     ]
+    const features = [
+        { label: "Knowledge of Federal\n& State Procurement" },
+        { label: "Regulatory\nCompliance Expertise" },
+        { label: "Transparent Business\nOperations" },
+        { label: "Strategic Contract\nManagement" },
+    ];
+
     return (
         <main>
             <section className='relative'>
@@ -120,14 +127,14 @@ const Home = () => {
                                 ABOUT US
                             </p>
 
-                            <div class="flex justify-around gap-2 bg-gray-100 rounded-full px-1 py-1.5 max-w-[503px] h-[67px] mb-6 border border-gray-400">
-                                <button class="px-5 py-2 rounded-full hover:bg-[#388EF6] hover:text-white text-[#191D28] text-[22px]">
+                            <div class="flex flex-wrap justify-around gap-2 bg-gray-100 rounded-full px-1 py-1.5 max-w-[503px] h-auto mb-6 border border-gray-400  sm:text-[22px] text-[16px]">
+                                <button class="px-5 py-2 rounded-full hover:bg-[#388EF6] hover:text-white text-[#191D28]">
                                     Our Mission
                                 </button>
-                                <button class="px-5 py-2 rounded-full hover:bg-[#388EF6] hover:text-white text-[#191D28] text-[22px]">
+                                <button class="px-5 py-2 rounded-full hover:bg-[#388EF6] hover:text-white text-[#191D28]">
                                     Our Vision
                                 </button>
-                                <button class="px-5 py-2 rounded-full  hover:bg-[#388EF6] hover:text-white text-[#191D28] text-[22px]">
+                                <button class="px-5 py-2 rounded-full  hover:bg-[#388EF6] hover:text-white text-[#191D28]">
                                     Our Story
                                 </button>
                             </div>
@@ -163,23 +170,23 @@ const Home = () => {
                 </div>
             </section>
             <section className='flex flex-col items-center mt-16'>
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center lg:px-0 px-6">
                     <div className="flex items-center gap-2">
-                        <img src="/images/Home/Section3/iconTitle.png" alt="" className='w-[26px] h-[13px]'/>
-                        <h2 className='text-[18px] text-[#051649]'>SERVICE</h2>
+                        <img src="/images/Home/Section3/iconTitle.png" alt="" className='w-[26px] h-[13px]' />
+                        <h2 className='text-[18px] text-[#051649] '>SERVICE</h2>
                     </div>
                     <h3 className='text-[48px] text-[#0B1422]'>OUR CORE SERVICE</h3>
                 </div>
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 max-w-[1182px] h-auto mt-16">
-                        {services.map((item, index) => (
-                    <div className={`max-w-[356px] h-[295px] py-5 px-6 rounded-[21.29px] shadow-lg bg-white ${index === 1 ? 'lg:mt-20' : ''}`} key={index}>
+                    {services.map((item, index) => (
+                        <div className={`max-w-[356px] h-[295px] py-5 px-6 rounded-[21.29px] shadow-lg bg-white ${index === 1 ? 'lg:mt-20' : ''}`} key={index}>
                             <div className="bg-gradient-to-b from-[#1F90D7] to-[#1F90D7]/0 rounded-lg w-[75px] h-[68px] flex items-center justify-center mb-4">
                                 <img src={item.image} alt="service" />
                             </div>
                             <h4 className='text-[26.62px] mt-4 font-semibold'>{item.title}</h4>
                             <p className='text-[17.03px] mt-4 text-[#7A7A7A] max-w-[261px]'>{item.description}</p>
-                    </div>
-                        ))}
+                        </div>
+                    ))}
                 </div>
             </section>
             <section className='lg:px-0 px-9 mt-28'>
@@ -262,6 +269,50 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            <section className="w-full  flex items-center justify-center bg-[#031B4E]">
+                <div className="max-w-[1434px]  px-4 lg:px-16 py-20 flex flex-col lg:flex-row items-center gap-10">
+
+                    <div className="relative lg:w-[50%]">
+                        <img
+                            src="/images/Home/Section6/leader&expertise.png"
+                            alt="Leadership team"
+                            className="w-[628px] h-[550px] object-top"
+                        />
+
+                        <div className="absolute bottom-8 right-28 text-center">
+                            <p className="text-white text-[45px] font-extrabold">20+</p>
+                            <p className="text-blue-200 text-[20px] leading-tight">
+                                Years <br /> Experienced
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="flex-1">
+                        <h2 className="text-white text-4xl lg:text-[42px] font-semibold mb-12 max-w-[620px]">
+                            Leadership & Expertise — A Foundation of Excellence
+                        </h2>
+
+                        <div className="grid sm:grid-cols-2 gap-10">
+                            {features.map((item, index) => (
+                                <div
+                                    key={index}
+                                    className="bg-white/15 rounded-2xl py-10 px-4 flex flex-col items-center text-center gap-6"
+                                >
+                                    <div className="w-11 h-11 rounded-full bg-[#3F95F9] flex items-center justify-center">
+                                        <img src="/images/Home/Section6/tick_Icon.png" alt="" />
+                                    </div>
+
+                                    <p className="text-white font-semibold text-[16px] whitespace-pre">
+                                        {item.label}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
         </main>
     )
 }
