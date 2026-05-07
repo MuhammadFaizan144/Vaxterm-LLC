@@ -47,6 +47,20 @@ const icons = [{
   desciption: "Cloud-Based ERP & CRM Systems"
 }
 ]
+const strategicSourcing = [
+  {
+    list: "Global Manufacturer Partnerships"
+  },
+  {
+    list: "Industrial Equipment Procurement"
+  },
+  {
+    list: "Medical & Technical Equipment Sourcing"
+  },
+  {
+    list: "Logistics & Delivery Coordination"
+  }
+]
 const About = () => {
   return (
     <main>
@@ -129,7 +143,7 @@ const About = () => {
       </section>
       <section className='mb-24'>
         <div className=" bg-white text-black flex items-center justify-center px-8 font-sans ">
-          <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-x-24 items-center">
 
             {/* Left Content Section */}
             <div className="flex flex-col gap-4">
@@ -192,6 +206,30 @@ const About = () => {
 
           </div>
         </div>
+      </section>
+      <section>
+        <div className="grid grid-cols-1 lg:grid-cols-2 max-w-[1248px] mx-auto lg:gap-28 gap-10 px-10">
+          <div>
+            <h2 className='max-w-[502px] text-[48px] font-bold'>Strategic Sourcing — Beyond the Digital Frontier</h2>
+            <p className='max-w-[460px] text-[16px] text-[#011505] font-dm'>Recognizing that operational success extends beyond software and hardware, Vaxterm LLC maintains a powerful global procurement division </p>
+            <div className="">
+              <ul>
+                {strategicSourcing.map((item, index) => (
+                  <li key={index} className='bg-[#F5F4F4] w-[373px] flex py-[5px] px-2 mt-4
+                   items-center gap-4'>
+                    <div className='bg-[#3D92F7] size-[16px] rounded-full flex justify-center items-center'><img src="/images/AboutUs/section7/tick.png" alt="" /></div>
+                    <p className='text-[16px] text-black font-medium font-dm'>{item.list}</p>
+                  </li>
+                ))}
+
+              </ul>
+            </div>
+          </div>
+          <div className="xl:max-w-[633px] h-[477px]">
+                <img src="/images/AboutUs/section7/strategicpic.png" alt="" />
+          </div>
+        </div>
+
       </section>
     </main>
   )
