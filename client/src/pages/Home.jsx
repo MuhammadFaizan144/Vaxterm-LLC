@@ -323,7 +323,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-
+            {/* Leadership & Expertise  */}
             <section className="w-full  flex items-center justify-center bg-[#031B4E] mt-10">
                 <div className="max-w-[1434px]  px-4 lg:px-16 py-20 flex flex-col lg:flex-row items-center gap-10">
 
