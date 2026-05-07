@@ -115,10 +115,11 @@ const Home = () => {
     };
     return (
         <main>
+            {/* Hero */}
             <section className='relative'>
-
+                <div className="absolute inset-0 bg-black/40 z-10 h-[877px]"></div>
                 <img src="/images/hero.png" alt="hero" className='w-full h-[877px]' />
-                <div className="text-white border-[5px] border-r-0 pl-12 py-5 border-white max-w-[571px] absolute top-1/2 left-16 lg:-translate-y-1/2 -translate-y-[70%]">
+                <div className="text-white border-[5px] z-20 border-r-0 pl-12 py-5 border-white max-w-[571px] absolute top-1/2 sm:left-16 left-4 lg:-translate-y-1/2 -translate-y-[70%]">
                     <p className="lg:text-[60px] text-[40px] leading-[71px] font-bold font-dm">Innovative IT Infrastructure & Enterprise Software Solutions</p>
                     <div className="flex gap-4 mt-8 flex-wrap">
                         <button className="bg-blue-500 hover:bg-blue-600 text-white py-4 px-4 rounded">Get Free Consultation</button>
@@ -157,7 +158,7 @@ const Home = () => {
                     </ul>
                 </div>
             </section>
-
+            {/* About Us */}
             <section>
                 <div className="max-w-[1141px] w-full bg-white mx-auto rounded-2xl  lg:mt-24 mt:20">
                     <div className="flex flex-col lg:flex-row h-auto lg:h-[506px]">
@@ -219,6 +220,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            {/* OUR CORE SERVICE */}
             <section className='flex flex-col items-center mt-16'>
                 <div className="flex flex-col items-center lg:px-0 px-6">
                     <div className="flex items-center gap-2">
@@ -239,6 +241,7 @@ const Home = () => {
                     ))}
                 </div>
             </section>
+            {/* INDUSTRIES WE SERVE */}
             <section className='lg:px-0 px-9 mt-28'>
                 <h2 className="text-[48px] flex justify-center mt-10">
                     Industries We Serve
@@ -246,12 +249,13 @@ const Home = () => {
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3 max-w-[1341px] mx-auto mt-10">
                     {industries.map((item, index) => (
                         <div className="flex flex-col items-center">
-                            <img src={item.image} alt="industry" className='w-full h-[488px] rounded-[13px]' />
+                            <img src={item.image} alt="industry" className='w-full sm:h-[488px] h-[360px] rounded-[13px]' />
                             <p className='text-[#0B1422] text-[24px] text-center mt-2 mb-4'>{item.description}</p>
                         </div>
                     ))}
                 </div>
             </section>
+            {/* Government Procurement Ready */}
             <section className="px-4 py-12">
 
                 <div className="max-w-[1218px] mx-auto grid lg:grid-cols-2 gap-8 items-center">
@@ -319,6 +323,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
             <section className="w-full  flex items-center justify-center bg-[#031B4E] mt-10">
                 <div className="max-w-[1434px]  px-4 lg:px-16 py-20 flex flex-col lg:flex-row items-center gap-10">
 
@@ -326,12 +331,12 @@ const Home = () => {
                         <img
                             src="/images/Home/Section6/leader&expertise.png"
                             alt="Leadership team"
-                            className="w-[628px] h-[550px] object-top"
+                            className="w-[628px] sm:h-[550px] h-[360px] object-top"
                         />
 
-                        <div className="absolute bottom-8 right-28 text-center">
-                            <p className="text-white text-[45px] font-extrabold">20+</p>
-                            <p className="text-blue-200 text-[20px] leading-tight">
+                        <div className="absolute bottom-8 md:right-28 right-10 text-center">
+                            <p className="text-white sm:text-[45px] text-[30px] font-extrabold">20+</p>
+                            <p className="text-blue-200 sm:text-[20px] text-[16px] leading-tight">
                                 Years <br /> Experienced
                             </p>
                         </div>
@@ -417,8 +422,8 @@ const Home = () => {
                 <div className="grid md:grid-cols-2 grid-cols-1 gap-4 max-w-[1278px] items-center mx-auto">
 
                     <div className="relative">
-                        <img src="images/Home/Section8/Questions.png" alt="" />
-                        <div className="absolute bottom-0 right-[74px] bg-black rounded-[20px] w-[220px] p-6 py-6">
+                        <img src="images/Home/Section8/Questions.png" alt="" className='md:p-0 px-4 '/>
+                        <div className="absolute bottom-0 lg:right-[74px] md:right-[24px] right-8 bg-black rounded-[20px] md:w-[220px] w-[180px] p-6 md:py-6 py-4">
                             <p className='text-[40px] text-white font-semibold'>10+</p>
                             <p className='text-[20px] text-white'>Years Of<br /> Experinece</p>
                         </div>
