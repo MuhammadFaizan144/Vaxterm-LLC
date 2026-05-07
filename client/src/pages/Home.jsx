@@ -30,15 +30,30 @@ const Home = () => {
         {
             image: "/images/Home/Section4/IWS03.png",
             description: "Industrial & Manufacturing"
-        },{
+        }, {
             image: "/images/Home/Section4/IWS04.png",
             description: "Healthcare & Medical"
-        },{
+        }, {
             image: "/images/Home/Section4/IWS05.png",
             description: "Education & Public Sector"
-        },{
+        }, {
             image: "/images/Home/Section4/IWS06.png",
             description: "Enterprise & Corporate Clients"
+        }
+    ]
+    const services = [
+        {
+            image: "/images/Home/Section3/back-in-time.png",
+            title:"Enterprise Hardware",
+            description:"High-performance IT infrastructure including enterprise servers"
+        },{
+            image: "/images/Home/Section3/back-in-time.png",
+            title:"Advanced Software Solutions",
+            description:"Scalable SaaS platforms including CRM, ERP"
+        },{
+            image: "/images/Home/Section3/back-in-time.png",
+            title:"Strategic Procurement",
+            description:"Global sourcing of specialized equipment, mission-critical assets, and logistics management"
         }
     ]
     return (
@@ -53,7 +68,7 @@ const Home = () => {
                         <button className="bg-white hover:bg-gray-200 text-black py-4 px-4 rounded">Explore Our Service</button>
                     </div>
                 </div>
-                
+
                 <div className="max-w-[1141px] mx-auto px-4 -mt-10 relative z-10">
                     <ul className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
@@ -85,6 +100,7 @@ const Home = () => {
                     </ul>
                 </div>
             </section>
+
             <section>
                 <div class="max-w-[1141px] w-full bg-white mx-auto rounded-2xl  lg:mt-24 mt:20">
                     <div class="flex flex-col lg:flex-row h-auto lg:h-[506px]">
@@ -146,18 +162,105 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className='lg:px-0 px-9'>
+            <section className='flex flex-col items-center mt-16'>
+                <div className="flex flex-col items-center">
+                    <div className="flex items-center gap-2">
+                        <img src="/images/Home/Section3/iconTitle.png" alt="" className='w-[26px] h-[13px]'/>
+                        <h2 className='text-[18px] text-[#051649]'>SERVICE</h2>
+                    </div>
+                    <h3 className='text-[48px] text-[#0B1422]'>OUR CORE SERVICE</h3>
+                </div>
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 max-w-[1182px] h-auto mt-16">
+                        {services.map((item, index) => (
+                    <div className={`max-w-[356px] h-[295px] py-5 px-6 rounded-[21.29px] shadow-lg bg-white ${index === 1 ? 'lg:mt-20' : ''}`} key={index}>
+                            <div className="bg-gradient-to-b from-[#1F90D7] to-[#1F90D7]/0 rounded-lg w-[75px] h-[68px] flex items-center justify-center mb-4">
+                                <img src={item.image} alt="service" />
+                            </div>
+                            <h4 className='text-[26.62px] mt-4 font-semibold'>{item.title}</h4>
+                            <p className='text-[17.03px] mt-4 text-[#7A7A7A] max-w-[261px]'>{item.description}</p>
+                    </div>
+                        ))}
+                </div>
+            </section>
+            <section className='lg:px-0 px-9 mt-28'>
                 <h2 className="text-[48px] flex justify-center mt-10">
                     Industries We Serve
                 </h2>
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3 max-w-[1341px] mx-auto mt-10">
-                {industries.map((item, index) => (
-                    <div className="flex flex-col items-center">
-                        <img src={item.image} alt="industry" className='w-full h-[488px] rounded-[13px]'/>
-                        <p className='text-[#0B1422] text-[24px] text-center mt-2 mb-4'>{item.description}</p>
+                    {industries.map((item, index) => (
+                        <div className="flex flex-col items-center">
+                            <img src={item.image} alt="industry" className='w-full h-[488px] rounded-[13px]' />
+                            <p className='text-[#0B1422] text-[24px] text-center mt-2 mb-4'>{item.description}</p>
+                        </div>
+                    ))}
+                </div>
+            </section>
+            <section className="px-4 py-12">
+
+                <div className="max-w-[1218px] mx-auto grid lg:grid-cols-2 gap-8 items-center">
+                    {/* LEFT SIDE */}
+                    <div>
+                        {/* Heading */}
+                        <h2 className="text-[32px] md:text-[40px] lg:text-[48px] font-bold text-[#0B1B35] leading-tight mb-4">
+                            Government <br /> Procurement Ready
+                        </h2>
+                        {/* Description */}
+                        <p className="text-[16px] md:text-[18px] lg:text-[18px] text-gray-600 mb-6 leading-relaxed">
+                            Vaxterm LLC is fully registered to support federal and state
+                            procurement requirements. We adhere to strict compliance
+                            standards and maintain active registration within government
+                            procurement systems.
+                        </p>
+                        {/* Image */}
+                        <div className="rounded-2xl overflow-hidden">
+                            <img
+                                src="/images/Home/Section5/govermentReady.png"
+                                alt="Handshake agreement"
+                                className="w-full h-[194px]  object-cover"
+                            />
+                        </div>
                     </div>
-                ))}
-                 </div>   
+                    {/* RIGHT SIDE CARD */}
+                    <div className="bg-[#F9FAFB] border border-[#E5E7EB] rounded-2xl p-6 md:p-8">
+                        {/* Title */}
+                        <h3 className="text-[18px] md:text-[20px] font-semibold text-[#0B1B35] mb-4">
+                            SAM.gov Registered Vendor
+                        </h3>
+                        {/* NAICS */}
+                        <div className="mb-6">
+                            <p className="font-semibold text-[16px] mb-2">NAICS Codes:</p>
+                            <ul className="space-y-2 text-[16px] text-[#64748B]">
+                                <li>• 541512 — Computer Systems Design Services</li>
+                                <li>• 423430 — Computer & Peripheral Equipment</li>
+                                <li>• 423610 — Electrical Equipment & Supplies</li>
+                            </ul>
+                        </div>
+                        {/* Certifications */}
+                        <div className="mb-6">
+                            <p className="font-semibold text-[16px] mb-4">
+                                Business Certifications:
+                            </p>
+                            <ul className="space-y-2 text-[16px] text-[#64748B]">
+                                <li className="flex items-center gap-2">
+                                    <span className="text-green-500">✓</span>
+                                    Government Contract Ready
+                                </li>
+                                <li className="flex items-center gap-2">
+                                    <span className="text-green-500">✓</span>
+                                    Compliance-Oriented Operations
+                                </li>
+                                <li className="flex items-center gap-2">
+                                    <span className="text-green-500">✓</span>
+                                    Vendor Registration Complete
+                                </li>
+                            </ul>
+                        </div>
+                        {/* Button */}
+                        <button className="bg-blue-500 hover:bg-[#3B92F8] text-white px-6 py-3 rounded-lg flex items-center gap-2 transition text-[16px]">
+                            <img src="/images/Home/Section5/downloadIcon.png" alt="" /> Download Capability Statement
+                        </button>
+                    </div>
+                </div>
             </section>
         </main>
     )
