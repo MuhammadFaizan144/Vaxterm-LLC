@@ -21,17 +21,17 @@ const Navbar = () => {
   return (
     <header className="flex justify-center">
       
-      <nav className="mt-6 absolute w-[90%] lg:w-[95%] flex items-center lg:justify-evenly justify-around lg:py-6 py-4 lg:px-0 px-10 lg:rounded-[100px] rounded-3xl bg-white z-50">
+      <nav className="mt-6 absolute w-[90%] lg:w-[95%] flex items-center  justify-between lg:py-3 py-2 lg:px-16 sm:px-10 px-5 lg:rounded-[100px] rounded-3xl bg-white z-50">
 
         {/* Logo */}
         <img
           src="/images/logo.png"
           alt="logo"
-          className="max-w-[172px] h-[64px]"
+          className="max-w-[172px] xl:h-[64px] h-[50px]"
         />
 
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex items-center gap-8 text-[16px]">
+        <ul className="hidden lg:flex items-center xl:gap-8 gap-4 text-[16px]">
           {links.map((item, index) => (
             <li key={index}>
               <NavLink
@@ -48,7 +48,7 @@ const Navbar = () => {
         {/* CTA Button (Desktop) */}
         <Link
           to="/free-quote"
-          className="hidden lg:block bg-[#0D7FFB] text-white rounded-[8px] text-[16px] py-3 px-5"
+          className="hidden lg:block bg-[#0D7FFB] text-white rounded-[8px] text-[16px] xl:py-3 py-2 xl:px-5 px-3"
         >
           Get Free Quote
         </Link>
