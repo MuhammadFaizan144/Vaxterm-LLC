@@ -149,11 +149,11 @@ const About = () => {
           <div className="flex md:flex-col flex-row gap-8 justify-between">
 
             <div className="bg-[#3D8EF4] rounded-[25px] p-5 max-w-[375px] shadow-lg">
-              <h4 className="text-[25.37px] text-white font-semibold mb-3">
+              <h4 className="lg:text-[25.37px] text-[16px] text-white font-semibold mb-3">
                 Our Identity
               </h4>
 
-              <p className="text-[13.84px] leading-6 text-white/90">
+              <p className="lg:text-[13.84px] text-[10px] leading-6 text-white/90">
                 Vaxterm LLC is an Illinois-based strategic solutions provider dedicated
                 to meeting the evolving needs of government agencies and global
                 enterprises. Our mission is to simplify complex supply chains.
@@ -161,11 +161,11 @@ const About = () => {
             </div>
 
             <div className="bg-black rounded-[25px] p-6 max-w-[375px] shadow-lg">
-              <h4 className="text-[25.37px] text-white font-semibold mb-3">
+              <h4 className="lg:text-[25.37px] text-[16px] text-white font-semibold mb-3">
                 Our Commitment
               </h4>
 
-              <p className="text-[13.84px] leading-6 text-white/90">
+              <p className="lg:text-[13.84px] text-[10px] leading-6 text-white/90">
                 At Vaxterm LLC, we believe that successful partnerships are built on
                 trust, performance, and accountability. Our operations are guided by a
                 "Quality First" philosophy, ensuring that every hardware component and
@@ -328,7 +328,7 @@ const About = () => {
             </div>
           </div>
           <div className="">
-            <img src="/images/AboutUs/section7/strategicpic.png" alt="" className='xl:max-w-[633px] h-[477px]'/>
+            <img src="/images/AboutUs/section7/strategicpic.png" alt="" className='xl:max-w-[633px] lg:h-[477px] h-[400px]'/>
           </div>
         </div>
 
