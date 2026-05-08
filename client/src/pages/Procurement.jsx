@@ -160,6 +160,113 @@ const Procurement = () => {
 
         </div>
       </section>
+      <section className='bg-[#1C3260] w-full p-10'>
+        <div className=" flex justify-center">
+          <h2 className='text-center font-dm font-bold text-[40px] text-white mb-10'>Overview of <br /> Procurement Support</h2>
+        </div>
+        {/* Inner section 1 */}
+        <div className="flex flex-col mb-14">
+          <div className="flex lg:flex-row flex-col gap-10 justify-center">
+            <div className="max-w-[815px] bg-white/15 rounded-[20px] p-10">
+              <div className="bg-[#3D92F7] size-[50px] flex justify-center items-center rounded-[10px] mb-6">
+                <img src="/images/Procurement/section3/IconOoP01.png" alt="" />
+              </div>
+              <h2 className='text-[28px] text-white font-bold mb-6'>Comprehensive Procurement Solutions</h2>
+              <p className='text-[16px] text-white/80 mb-6'>Vaxterm LLC delivers comprehensive procurement services that support government agencies and enterprise organizations in sourcing specialized equipment and operational supplies. Our procurement strategies are built around quality assurance, supplier reliability, and cost efficiency.</p>
+              <div className="border-b mb-6"></div>
+              <div className="">
+                <ul className='text-[20px] font-medium text-white'>
+                  <li className='flex items-center gap-4' ><img src="/images/Procurement/section3/tickPro.png" alt="" /> we manage sourcing processes</li>
+                   <li className='flex items-center gap-4'><img src="/images/Procurement/section3/tickPro.png" alt="" />Materials are delivered securely and efficiently</li>
+                </ul>
+              </div>
+            </div>
+            <img src="/images/Procurement/section3/OoP01.png" alt="" className='lg:max-w-[428px]  max-lg:h-[300px] object-cover rounded-[13px]'/>
+          </div>
+        </div>
+        {/* Inner section 2 */}
+        <div className="flex flex-col mb-14">
+          <div className="flex lg:flex-row flex-col gap-10 justify-center">
+            <img src="/images/Procurement/section3/OoP02.png" alt="" className='lg:max-w-[428px]  max-lg:h-[300px] object-cover rounded-[13px]'/>
+            <div className="max-w-[815px] bg-white/15 rounded-[20px] p-10">
+              <div className="bg-[#3D92F7] size-[50px] flex justify-center items-center rounded-[10px] mb-6">
+                <img src="/images/Procurement/section3/IconOoP02.png" alt="" />
+              </div>
+              <h2 className='text-[28px] text-white font-bold mb-6'>Medical & Healthcare Equipment</h2>
+              <p className='text-[16px] text-white/80 mb-6'>Vaxterm LLC supports healthcare facilities and government institutions by sourcing specialized medical equipment and laboratory instruments. We collaborate with trusted manufacturers to provide reliable medical technology that meets strict regulatory and safety standards.</p>
+              <div className="border-b mb-6"></div>
+              <div className="">
+                <ul className='text-[20px] font-medium text-white'>
+                  <li className='flex items-center gap-4' ><img src="/images/Procurement/section3/tickPro.png" alt="" />Medical Devices & Instruments</li>
+                   <li className='flex items-center gap-4'><img src="/images/Procurement/section3/tickPro.png" alt="" />Healthcare Facility Equipment</li>
+                </ul>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        {/* Inner section 3 */}
+         <div className="flex flex-col mb-14">
+          <div className="flex lg:flex-row flex-col gap-10 justify-center">
+            <div className="max-w-[815px] bg-white/15 rounded-[20px] p-10">
+              <div className="bg-[#3D92F7] size-[50px] flex justify-center items-center rounded-[10px] mb-6">
+                <img src="/images/Procurement/section3/IconOoP03.png" alt="" />
+              </div>
+              <h2 className='text-[28px] text-white font-bold mb-6'>Industrial Machinery Procurement</h2>
+              <p className='text-[16px] text-white/80 mb-6'>Vaxterm LLC provides sourcing services for industrial machinery and heavy-duty equipment required for operational facilities. Our procurement capabilities include forklifts, lifting systems, and material handling equipment used across industrial and logistics environments.</p>
+              <div className="border-b mb-6"></div>
+              <div className="">
+                <ul className='text-[20px] font-medium text-white'>
+                  <li className='flex items-center gap-4' ><img src="/images/Procurement/section3/tickPro.png" alt="" />Forklifts and Material Handling Equipment</li>
+                   <li className='flex items-center gap-4'><img src="/images/Procurement/section3/tickPro.png" alt="" />Heavy Industrial Machinery</li>
+                </ul>
+              </div>
+            </div>
+            <img src="/images/Procurement/section3/OoP03.png" alt="" className='lg:max-w-[428px]  max-lg:h-[300px] object-cover rounded-[13px]'/>
+          </div>
+        </div>
+        {/* Inner section 4 */}
+        <div className="flex flex-col mb-14">
+          <div className="flex lg:flex-row flex-col gap-10 justify-center">
+            <img src="/images/Procurement/section3/OoP04.png" alt="" className='lg:max-w-[428px]  max-lg:h-[300px] object-cover rounded-[13px]'/>
+            <div className="max-w-[815px] bg-white/15 rounded-[20px] p-10">
+              <div className="bg-[#3D92F7] size-[50px] flex justify-center items-center rounded-[10px] mb-6">
+                <img src="/images/Procurement/section3/IconOoP04.png" alt="" />
+              </div>
+              <h2 className='text-[28px] text-white font-bold mb-6'>General Supplies & Facility Equipment</h2>
+              <p className='text-[16px] text-white/80 mb-6'>Vaxterm LLC supports organizations by sourcing general operational supplies required for daily business and facility management. Our team handles bulk procurement of office materials, furniture, and commercial-grade appliances to ensure consistent availability of essential resources.</p>
+              <div className="border-b mb-6"></div>
+              <div className="">
+                <ul className='text-[20px] font-medium text-white'>
+                  <li className='flex items-center gap-4' ><img src="/images/Procurement/section3/tickPro.png" alt="" />Office Furniture & Equipment</li>
+                   <li className='flex items-center gap-4'><img src="/images/Procurement/section3/tickPro.png" alt="" /> Logistics & Inventory Coordination</li>
+                </ul>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        {/* Inner section 5 */}
+         <div className="flex flex-col mb-14">
+          <div className="flex lg:flex-row flex-col gap-10 justify-center">
+            <div className="max-w-[815px] bg-white/15 rounded-[20px] p-10">
+              <div className="bg-[#3D92F7] size-[50px] flex justify-center items-center rounded-[10px] mb-6">
+                <img src="/images/Procurement/section3/IconOoP05.png" alt="" />
+              </div>
+              <h2 className='text-[28px] text-white font-bold mb-6'>Direct Manufacturer Sourcing</h2>
+              <p className='text-[16px] text-white/80 mb-6'>Vaxterm LLC maintains strong relationships with global manufacturers, enabling direct sourcing of specialized equipment and materials. Our end-to-end supply chain management approach ensures quality control, cost transparency, and reliable delivery timelines.</p>
+              <div className="border-b mb-6"></div>
+              <div className="">
+                <ul className='text-[20px] font-medium text-white'>
+                  <li className='flex items-center gap-4' ><img src="/images/Procurement/section3/tickPro.png" alt="" />Direct Manufacturer Coordination</li>
+                   <li className='flex items-center gap-4'><img src="/images/Procurement/section3/tickPro.png" alt="" />Shipment Tracking & Logistics</li>
+                </ul>
+              </div>
+            </div>
+            <img src="/images/Procurement/section3/OoP05.png" alt="" className='lg:max-w-[428px]  max-lg:h-[300px] object-cover rounded-[13px]'/>
+          </div>
+        </div>
+      </section>
       <section>
         <h3 className="text-[48px] text-center mt-16 mb-20 font-bold leading-tight ">
           What Clients Say Our <br /> Services
