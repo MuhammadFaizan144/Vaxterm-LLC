@@ -64,7 +64,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="absolute top-32 w-[90%] bg-white shadow-lg rounded-xl p-6 flex flex-col gap-4 lg:hidden z-40">
+        <div className="absolute top-24 w-[90%] bg-white shadow-lg rounded-xl p-6 flex flex-col gap-4 lg:hidden z-40">
           {links.map((item, index) => (
             <NavLink
               key={index}
