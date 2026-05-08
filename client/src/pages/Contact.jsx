@@ -24,7 +24,7 @@ const Contact = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10 h-[636px]"></div>
         <div className="absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[60%] text-center px-4">
           <h2 className='lg:text-[60px] md:text-[40px] text-[40px] font-dm text-white font-bold'>Contact Us</h2>
-          <p className='lg:text-[20px] md:text-[15px] text-[16px] font-dm text-white max-w-[500px]'>Connect with our team to discuss your technology, procurement, or enterprise infrastructure requirements.</p>
+          <p className='lg:text-[20px] md:text-[18px] text-[16px] leading-[30px] font-dm text-white mt-6 mx-auto'>Connect with our team to discuss your technology,<br/> procurement, or enterprise infrastructure <br/> requirements.</p>
         </div>
       </section>
       <section className='max-w-[1327px] h-auto mx-auto p-4'>

@@ -87,7 +87,7 @@ const Procurement = () => {
             </h2>
 
             <p className='lg:text-[20px] md:text-[18px] text-[16px] leading-[30px] font-dm text-white mt-6 max-w-[650px] mx-auto'>
-              Connect with our team to discuss your technology, procurement, or enterprise infrastructure requirements.
+              Reliable procurement and logistics solutions designed to <br/> deliver specialized equipment and essential supplies 
             </p>
 
           </div>
