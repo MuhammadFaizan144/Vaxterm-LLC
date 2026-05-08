@@ -104,12 +104,12 @@ const Procurement = () => {
             <img
               src="/images/Procurement/section2/strategicSourcingPro.png"
               alt=""
-              className='w-[376px] h-[487px] rounded-[25px] object-cover shadow-lg'
+              className='md:w-[376px] w-full h-[487px] rounded-[25px] object-cover shadow-lg'
             />
           </div>
 
           {/* Content */}
-          <div className="w-[140%]">
+          <div className="md:w-[140%] w-full">
 
 
             <h3 className='lg:text-[48px] md:text-[40px] text-[32px] leading-[50px] text-black font-bold mt-4 max-w-[413px]'>
@@ -154,13 +154,63 @@ const Procurement = () => {
             <img
               src="/images/Procurement/section2/strategicSourcingPro2.png"
               alt=""
-              className=' h-[417px] rounded-[25px] shadow-lg'
+              className=' h-[417px] md:w-[306px] w-full rounded-[25px] shadow-lg object-cover'
             />
           </div>
 
         </div>
       </section>
-      
+      <section>
+        <h3 className="text-[48px] text-center mt-16 mb-20 font-bold leading-tight ">
+          What Clients Say Our <br /> Services
+        </h3>
+        <div className="max-w-7xl mx-auto px-4 py-10">
+          {/* Scroll Container */}
+          <div
+            ref={scrollRef}
+            onScroll={handleScroll}
+            className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-8"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            {testimonials.map((item) => (
+              <div
+                key={item.id}
+                className="min-w-[90%] md:min-w-[45%] lg:min-w-[39%] snap-center bg-[#F4F7F9] rounded-[24px] p-8 md:p-10 relative flex flex-col"
+              >
+                <div className="flex justify-between items-start mb-8">
+                  <img src={item.image} alt="" className="size-[120px] rounded-full" />
+                  <img src="/images/Home/Section7/quote_Icon.png" alt="" className='w-[42px] h-[34px]' />
+                </div>
+
+                <p className="text-[#0B1422] text-[20px] font-medium leading-relaxed mb-10">
+                  "{item.text}"
+                </p>
+
+                <div>
+                  <h4 className="text-[16px] font-bold leading-[26px] text-[#0B1422] mb-2">{item.name}</h4>
+                  <div className="flex gap-1 text-orange-400">
+                    {[...Array(5)].map((_, i) => <span key={i}>★</span>)}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Pagination Dots */}
+          <div className="flex justify-center items-center gap-3 mt-8">
+            {[...Array(8)].map((_, i) => (
+              <button
+                key={i}
+                onClick={() => scrollTo(i)}
+                className={`transition-all duration-300 rounded-full border-2 ${activeDot === i
+                  ? "w-4 h-4 bg-[#3B82F6] border-[#3B82F6]"
+                  : "w-3 h-3 bg-white border-gray-300"
+                  }`}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
       <section className='mt-12 mb-20'>
         <div className="grid md:grid-cols-2 grid-cols-1 gap-4 max-w-[1278px] items-center mx-auto">
 
