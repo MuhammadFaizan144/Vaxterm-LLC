@@ -126,7 +126,7 @@ const About = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10 "></div>
         <div className="z-20 absolute flex justify-center flex-col text-center top-1/2 left-1/2 -translate-x-1/2 ">
           <h1 className='lg:text-[60px] md:text-[40px] text-[40px] font-dm text-white font-bold'>About Vaxterm LLC</h1>
-          <p className='lg:text-[20px] md:text-[15px] text-[16px] font-dm text-white'>Delivering Reliable Technology, Strategic Procurement, and Government Compliant Solutions.</p>
+          <p className='lg:text-[20px] md:text-[18px] text-[16px] leading-[30px] font-dm text-white mt-6 max-w-[650px] mx-auto'>Delivering Reliable Technology, Strategic Procurement, and Government Compliant Solutions.</p>
         </div>
       </section>
       <section className='max-w-[1218px] mx-auto mt-16 lg:px-0 px-4'>
