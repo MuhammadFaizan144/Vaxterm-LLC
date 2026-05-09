@@ -69,7 +69,7 @@ const Capabilities = () => {
                       </div>
                     </li>
                   ))}
-                  <button className='bg-[#0D7FFB] w-[150px] h-[49px] flex justify-center items-center text-white text-[16px] absolute bottom-0 right-0'>Download</button>
+                  <button className='bg-[#0D7FFB] w-[150px] h-[49px] flex justify-center items-center text-white text-[16px] absolute bottom-0 right-0 rounded-lg shadow-gray-400 shadow-lg'>Download</button>
                 </ul>
                 
               </div>
