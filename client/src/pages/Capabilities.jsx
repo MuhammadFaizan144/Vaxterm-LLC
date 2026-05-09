@@ -35,7 +35,7 @@ const Capabilities = () => {
 
       </section>
       {/* Company Overview */}
-      <section className='mt-20'>
+      <section className='mt-20 max-lg:p-4'>
         <div className="flex justify-center text-[48px] font-bold">
 
           <h2 className='text-[48px] font-bold text-[#0F172A]'>Company Overview</h2>
