@@ -67,3 +67,18 @@ export const rightcapalitiesoverview=[
         description:"Multi-sector procurement and supply chain management."
     }
 ]
+export const services = [
+    {
+        image: "/images/Capabilities/section3/ocs01.png",
+        title: "Technical Oversight",
+        description: "Strong technical evaluation and project supervision ensuring quality and performance compliance."
+    }, {
+        image: "/images/Capabilities/section3/ocs02.png",
+        title: "Net-Term Flexibility",
+        description: "Flexible payment structures tailored to government and enterprise procurement requirements."
+    }, {
+        image: "/images/Capabilities/section3/ocs03.png",
+        title: "Global Logistics Capability",
+        description: "Efficient sourcing and delivery of equipment through a reliable international supplier network."
+    }
+]

@@ -1,5 +1,5 @@
 import React from 'react'
-import { capalitiesoverview, rightcapalitiesoverview } from '../Constant'
+import { capalitiesoverview, rightcapalitiesoverview,services } from '../Constant'
 const Capabilities = () => {
   return (
     <main>
@@ -92,6 +92,24 @@ const Capabilities = () => {
           </div>
         </div>
       </section>
+      {/* Our Core strength */}
+            <section className='flex flex-col items-center mt-16'>
+                <div className="flex flex-col items-center lg:px-0 px-6">
+                    
+                    <h3 className='text-[48px] text-[#0B1422] font-bold'>Our Core strength</h3>
+                </div>
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 max-w-[1182px] h-auto mt-16">
+                    {services.map((item, index) => (
+                        <div className={`max-w-[356px] h-[295px] py-5 px-6 rounded-[21.29px] shadow-lg bg-white ${index === 1 ? 'lg:mt-20' : ''}`} key={index}>
+                            <div className="bg-[#3B91F7] rounded-lg size-[80px] flex items-center justify-center mb-4">
+                                <img src={item.image} alt="service" />
+                            </div>
+                            <h4 className='text-[26.62px] mt-7 font-semibold'>{item.title}</h4>
+                            <p className='text-[17.03px] mt-2 text-[#7A7A7A] max-w-[301px]'>{item.description}</p>
+                        </div>
+                    ))}
+                </div>
+            </section>
     </main>
   )
 }
