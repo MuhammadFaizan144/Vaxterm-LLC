@@ -1,5 +1,45 @@
 import React from 'react'
-import { capalitiesoverview, rightcapalitiesoverview,services } from '../Constant'
+
+import { capalitiesoverview, rightcapalitiesoverview, services } from '../Constant'
+const naicsData = [
+
+  {
+    code: "541511",
+    title: "Custom Computer Programming Services",
+    icon: "/images/Capabilities/section4/PAC01.png",
+  },
+  {
+    code: "541512",
+    title: "Computer Systems Design Services",
+    icon: "/images/Capabilities/section4/PAC02.png",
+  },
+  {
+    code: "423430",
+    title: "Computer & Peripheral Equipment",
+    icon: "/images/Capabilities/section4/PAC03.png",
+  },
+  {
+    code: "423610",
+    title: "Electrical Equipment & Supplies",
+    icon: "/images/Capabilities/section4/PAC04.png",
+  },
+  {
+    code: "423450",
+    title: "Medical Equipment & Supplies",
+    icon: "/images/Capabilities/section4/PAC05.png",
+  },
+  {
+    code: "423830",
+    title: "Industrial Machinery & Equipment",
+    icon: "/images/Capabilities/section4/PAC06.png",
+  },
+  {
+    code: "423420",
+    title: "Office Equipment & Supplies",
+    icon: "/images/Capabilities/section4/PAC07.png",
+    fullWidth: true,
+  },
+];
 const Capabilities = () => {
   return (
     <main>
@@ -71,9 +111,9 @@ const Capabilities = () => {
                   ))}
                   <button className='bg-[#0D7FFB] w-[150px] h-[49px] flex justify-center items-center text-white text-[16px] absolute bottom-0 right-0 rounded-lg shadow-gray-400 shadow-lg'>Download</button>
                 </ul>
-                
+
               </div>
-              
+
 
             </div>
           </div>
@@ -93,23 +133,103 @@ const Capabilities = () => {
         </div>
       </section>
       {/* Our Core strength */}
-            <section className='flex flex-col items-center mt-16'>
-                <div className="flex flex-col items-center lg:px-0 px-6">
-                    
-                    <h3 className='text-[48px] text-[#0B1422] font-bold'>Our Core strength</h3>
+      <section className='flex flex-col items-center mt-16'>
+        <div className="flex flex-col items-center lg:px-0 px-6">
+
+          <h3 className='text-[48px] text-[#0B1422] font-bold'>Our Core strength</h3>
+        </div>
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 max-w-[1182px] h-auto mt-16">
+          {services.map((item, index) => (
+            <div className={`max-w-[356px] h-[295px] py-5 px-6 rounded-[21.29px] shadow-lg bg-white ${index === 1 ? 'lg:mt-20' : ''}`} key={index}>
+              <div className="bg-[#3B91F7] rounded-lg size-[80px] flex items-center justify-center mb-4">
+                <img src={item.image} alt="service" />
+              </div>
+              <h4 className='text-[26.62px] mt-7 font-semibold'>{item.title}</h4>
+              <p className='text-[17.03px] mt-2 text-[#7A7A7A] max-w-[301px]'>{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+      {/* Primary NAICS Codes */}
+      <section className=" py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          {/* Heading */}
+          <div className="text-center mb-14">
+            <h2 className="text-[#0F172A] text-[36px] md:text-[48px] font-bold">
+              Primary NAICS Codes
+            </h2>
+            <p className="text-[#475569] mt-5 text-base md:text-[18px] leading-8 max-w-2xl mx-auto">
+              Vaxterm LLC operates under the following North American
+              Industry Classification System (NAICS) codes:
+            </p>
+          </div>
+          {/* Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {naicsData.map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={index}
+                  className={`bg-[#ffffff] rounded-2xl  border-[2.25px] border-[#E5E7EB] p-6 flex items-start gap-5 min-h-[150px]
+                ${item.fullWidth ? "md:col-span-2" : ""}`}
+                >
+                  {/* Icon */}
+                  <div className="w-16 h-16 rounded-2xl bg-[#3B82F6] flex items-center justify-center shrink-0">
+                    <img src={item.icon} alt="icon" />
+                  </div>
+                  {/* Content */}
+                  <div>
+                    <h3 className="text-[#3B82F6] text-[27px] font-bold">
+                      {item.code}
+                    </h3>
+                    <p className="text-[#111827] text-[18px] font-semibold mt-3 leading-snug">
+                      {item.title}
+                    </p>
+                  </div>
                 </div>
-                <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 max-w-[1182px] h-auto mt-16">
-                    {services.map((item, index) => (
-                        <div className={`max-w-[356px] h-[295px] py-5 px-6 rounded-[21.29px] shadow-lg bg-white ${index === 1 ? 'lg:mt-20' : ''}`} key={index}>
-                            <div className="bg-[#3B91F7] rounded-lg size-[80px] flex items-center justify-center mb-4">
-                                <img src={item.image} alt="service" />
-                            </div>
-                            <h4 className='text-[26.62px] mt-7 font-semibold'>{item.title}</h4>
-                            <p className='text-[17.03px] mt-2 text-[#7A7A7A] max-w-[301px]'>{item.description}</p>
-                        </div>
-                    ))}
-                </div>
-            </section>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* last Section */}
+      <section className='py-24 px-4 md:px-8 bg-[#1C3260] mt-8 mb-24'>
+        <div className="flex flex-col items-center">
+
+          <h5 className='text-4xl md:text-5xl font-bold text-white mb-6 text-center'>
+            Ready to Partner with Vaxterm?
+          </h5>
+
+          <p className='text-[#DBEAFE] text-[16px] md:text-[20px] leading-7 max-w-[768px] text-center mb-8'>
+            Let's discuss how we can support your mission-critical operations with
+            compliant, reliable technology solutions.
+          </p>
+
+          <div className="flex md:flex-row flex-col w-full max-w-4xl justify-center gap-[18px]">
+
+            <button className='flex items-center justify-center gap-3 text-[18px] w-full md:w-auto px-8 min-h-[64px] text-[#3D8EF4] bg-white rounded-xl'>
+              <img
+                src="/images/Capabilities/section5/pdf.png"
+                alt=""
+                className='w-[18px] h-[18px]'
+              />
+              Download Full Capability Statement
+            </button>
+
+            <button className='flex items-center justify-center gap-3 text-[18px] w-full md:w-auto px-14 min-h-[64px] bg-[#3D8EF4] text-white rounded-xl'>
+              <img
+                src="/images/Capabilities/section5/call.png"
+                alt=""
+                className='w-[18px] h-[18px]'
+              />
+              Schedule a Consultation
+            </button>
+
+          </div>
+        </div>
+      </section>
+
     </main>
   )
 }
