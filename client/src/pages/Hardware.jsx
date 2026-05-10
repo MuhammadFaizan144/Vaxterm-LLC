@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { useRef } from 'react'
 import { Plus, Minus } from 'lucide-react';
-import { globalOperation, testimonials, enterprisecomputing } from '../Constant/hardware'
+import { globalOperation, testimonials, enterprisecomputing, IndustrialPower, networking, facility } from '../Constant/hardware'
 const Hardware = () => {
   const scrollRef = useRef(null);
   const [activeDot, setActiveDot] = useState(0);
@@ -64,22 +64,101 @@ const Hardware = () => {
 
         </div>
       </section>
-      <section>
+      {/* enterprisecomputing */}
+      <section className=''>
         <div className="text-center flex justify-center text-[#110F0F] text-[30px] font-semibold font-dm mb-10 px-4 lg:text-[40px] sm:text-[35px]">
-                Enterprise Computing & Data <br /> Center Solutions
+          Enterprise Computing & Data <br /> Center Solutions
         </div>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 place-items-center max-w-[1277px] mx-auto gap-5 px-4 ">
           {enterprisecomputing.map((item, index) => (
-            <div className="max-w-[409px] lg:mb-20 sm:mb-28 mb-32 relative" key={index}>
+            <div className="max-w-[409px] lg:mb-48 sm:mb-28 mb-32 relative" key={index}>
               <img src={item.image} alt="" className='w-full rounded-[10px]' />
               <div className="absolute  -bottom-28 right-0">
                 <div className="absolute w-[59px] h-[56px] bg-[#3D92F7] flex justify-center items-center rounded-full right-8 -top-8">
                   <img src="images/Hardware/arrow.png" alt="arrow" className='size-[19px ]' />
                 </div>
-                <div className="bg-white max-w-[368px] h-[253px] border border-gray-200 shadow-lg rounded-b-[17.44px] rounded-tl-[17.44px] py-10 pl-8 pr-4">
+                <div className="bg-white flex flex-col justify-center gap-3 max-w-[368px] h-[253px] border border-gray-200 shadow-lg rounded-b-[17.44px] rounded-tl-[17.44px]  pl-8 pr-4 overflow-hidden">
                   <h3 className='text-[#110F0F text-[24px] font-semibold font-dm'>{item.title}</h3>
-                  <p className='text-[#110F0F] text-[16px] mt-3 mb-5 font-dm'>{item.description}</p>
-                  <button className='text-white bg-[#3D92F7] rounded-[8px] text-[16px] font-medium px-5 py-2'>
+                  <p className='text-[#110F0F] text-[16px] font-dm'>{item.description}</p>
+                  <button className='text-white bg-[#3D92F7] rounded-[8px] text-[16px] font-medium px-5 py-2 w-[149px] shadow-lg shadow-gray-400'>
+                    View Product
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+      {/* IndustrialPower */}
+      <section className=''>
+        <div className="text-center flex justify-center text-[#110F0F] text-[30px] font-semibold font-dm mb-10 px-4 lg:text-[40px] sm:text-[35px]">
+          Industrial Power & Energy<br className='max-lg:hidden' /> Systems
+        </div>
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 place-items-center max-w-[1277px] mx-auto gap-5 px-4 ">
+          {IndustrialPower.map((item, index) => (
+            <div className="max-w-[409px] lg:mb-48 sm:mb-28 mb-32 relative" key={index}>
+              <img src={item.image} alt="" className='w-full rounded-[10px]' />
+              <div className="absolute  -bottom-28 right-0">
+                <div className="absolute w-[59px] h-[56px] bg-[#3D92F7] flex justify-center items-center rounded-full right-8 -top-8">
+                  <img src="images/Hardware/arrow.png" alt="arrow" className='size-[19px ]' />
+                </div>
+                <div className="bg-white flex flex-col justify-center gap-3 max-w-[368px] h-[253px] border border-gray-200 shadow-lg rounded-b-[17.44px] rounded-tl-[17.44px]  pl-8 pr-4 overflow-hidden">
+                  <h3 className='text-[#110F0F text-[24px] font-semibold font-dm'>{item.title}</h3>
+                  <p className='text-[#110F0F] text-[16px] font-dm'>{item.description}</p>
+                  <button className='text-white bg-[#3D92F7] rounded-[8px] text-[16px] font-medium px-5 py-2 w-[149px] shadow-lg shadow-gray-400'>
+                    View Product
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+      {/* networking */}
+      <section className=''>
+        <div className="text-center flex justify-center text-[#110F0F] text-[30px] font-semibold font-dm mb-10 px-4 lg:text-[40px] sm:text-[35px]">
+          Networking & Connectivity<br className='max-lg:hidden' /> Hardware
+        </div>
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 place-items-center max-w-[1277px] mx-auto gap-5 px-4 ">
+          {networking.map((item, index) => (
+            <div className="max-w-[409px] lg:mb-48 sm:mb-28 mb-32 relative" key={index}>
+              <img src={item.image} alt="" className='w-full rounded-[10px]' />
+              <div className="absolute  -bottom-28 right-0">
+                <div className="absolute w-[59px] h-[56px] bg-[#3D92F7] flex justify-center items-center rounded-full right-8 -top-8">
+                  <img src="images/Hardware/arrow.png" alt="arrow" className='size-[19px ]' />
+                </div>
+                <div className="bg-white flex flex-col justify-center gap-3 max-w-[368px] h-[253px] border border-gray-200 shadow-lg rounded-b-[17.44px] rounded-tl-[17.44px]  pl-8 pr-4 overflow-hidden">
+                  <h3 className='text-[#110F0F text-[24px] font-semibold font-dm'>{item.title}</h3>
+                  <p className='text-[#110F0F] text-[16px] font-dm'>{item.description}</p>
+                  <button className='text-white bg-[#3D92F7] rounded-[8px] text-[16px] font-medium px-5 py-2 w-[149px] shadow-lg shadow-gray-400'>
+                    View Product
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+      {/* facility */}
+      <section className=''>
+        <div className="text-center flex justify-center text-[#110F0F] text-[30px] font-semibold font-dm mb-10 px-4 lg:text-[40px] sm:text-[35px]">
+          Facility & Commercial<br className='max-lg:hidden' /> Appliances
+        </div>
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 place-items-center max-w-[1277px] mx-auto gap-5 px-4 ">
+          {facility.map((item, index) => (
+            <div className="max-w-[409px] lg:mb-48 sm:mb-28 mb-32 relative" key={index}>
+              <img src={item.image} alt="" className='w-full rounded-[10px]' />
+              <div className="absolute  -bottom-28 right-0">
+                <div className="absolute w-[59px] h-[56px] bg-[#3D92F7] flex justify-center items-center rounded-full right-8 -top-8">
+                  <img src="images/Hardware/arrow.png" alt="arrow" className='size-[19px ]' />
+                </div>
+                <div className="bg-white flex flex-col justify-center gap-3 max-w-[368px] h-[253px] border border-gray-200 shadow-lg rounded-b-[17.44px] rounded-tl-[17.44px]  pl-8 pr-4 overflow-hidden">
+                  <h3 className='text-[#110F0F text-[24px] font-semibold font-dm'>{item.title}</h3>
+                  <p className='text-[#110F0F] text-[16px] font-dm'>{item.description}</p>
+                  <button className='text-white bg-[#3D92F7] rounded-[8px] text-[16px] font-medium px-5 py-2 w-[149px] shadow-lg shadow-gray-400'>
                     View Product
                   </button>
                 </div>
@@ -90,6 +169,7 @@ const Hardware = () => {
         </div>
       </section>
       {/* last section */}
+      
       <section>
         <h3 className="text-[48px] text-center mt-16 mb-20 font-bold leading-tight ">
           What Clients Say Our <br /> Services
