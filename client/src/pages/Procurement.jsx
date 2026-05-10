@@ -83,7 +83,7 @@ const Procurement = () => {
           <div className="max-w-[800px]">
 
             <h2 className='lg:text-[60px] md:text-[50px] text-[38px] leading-tight font-dm text-white font-bold'>
-              Procurement Services
+              Strategic Sourcing &<br /> Global Logistics
             </h2>
 
             <p className='lg:text-[20px] md:text-[18px] text-[16px] leading-[30px] font-dm text-white mt-6 max-w-[650px] mx-auto'>
