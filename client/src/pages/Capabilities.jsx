@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from "react-router-dom"
 import { capalitiesoverview, rightcapalitiesoverview, services } from '../Constant'
 const naicsData = [
 
@@ -208,14 +208,14 @@ const Capabilities = () => {
 
           <div className="flex md:flex-row flex-col w-full max-w-4xl justify-center gap-[18px]">
 
-            <button className='flex items-center justify-center gap-3 text-[18px] w-full md:w-auto px-8 min-h-[64px] text-[#3D8EF4] bg-white rounded-xl'>
+            <Link to="/capabilities/download" className='flex items-center justify-center gap-3 text-[18px] w-full md:w-auto px-8 min-h-[64px] text-[#3D8EF4] bg-white rounded-xl'>
               <img
                 src="/images/Capabilities/section5/pdf.png"
                 alt=""
                 className='w-[18px] h-[18px]'
               />
               Download Full Capability Statement
-            </button>
+            </Link>
 
             <button className='flex items-center justify-center gap-3 text-[18px] w-full md:w-auto px-14 min-h-[64px] bg-[#3D8EF4] text-white rounded-xl'>
               <img
