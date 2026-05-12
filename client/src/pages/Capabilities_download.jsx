@@ -12,73 +12,7 @@ import {
   DollarSign,
   Earth,
 } from "lucide-react";
-
-const competencies = [
-  {
-    icon: "/images/Capabilities/download/cc01.png",
-    title: "IT Infrastructure",
-    desc: "Enterprise-grade hardware solutions and infrastructure deployment for mission-critical operations.",
-    color: "bg-blue-100 text-blue-500",
-  },
-  {
-    icon: "/images/Capabilities/download/cc02.png",
-    title: "Enterprise Software",
-    desc: "Custom software development and system design services tailored to complex requirements.",
-    color: "bg-indigo-100 text-indigo-500",
-  },
-  {
-    icon:"/images/Capabilities/download/cc03.png",
-    title: "Global Procurement",
-    desc: "Reliable sourcing and delivery through an extensive international supplier network.",
-    color: "bg-green-100 text-green-500",
-  },
-  {
-    icon: "/images/Capabilities/download/cc04.png",
-    title: "Strategic Sourcing",
-    desc: "Multi-sector procurement and sophisticated supply chain management solutions.",
-    color: "bg-pink-100 text-pink-500",
-  },
-];
-
-const differentiators = [
-  {
-    icon: "/images/Capabilities/download/kd01.png",
-    title: "Technical Oversight",
-    desc: "Quality assurance through rigorous technical validation and project supervision.",
-    color: "bg-blue-50 border-blue-200 text-blue-600",
-  },
-  {
-    icon: "/images/Capabilities/download/kd02.png",
-    title: "Fiscal Flexibility",
-    desc: "Flexible Net-term payment structures tailored to government procurement.",
-    color: "bg-pink-50 border-pink-200 text-pink-600",
-  },
-  {
-    icon: "/images/Capabilities/download/kd03.png",
-    title: "Global Logistics",
-    desc: "Proven ability to move equipment across international borders reliably.",
-    color: "bg-green-50 border-green-200 text-green-600",
-  },
-];
-
-const naicsCodes = [
-  {
-    code: "541511",
-    title: "Custom Computer Programming Services",
-  },
-  {
-    code: "541512",
-    title: "Computer Systems Design Services",
-  },
-  {
-    code: "423430",
-    title: "Computer & Peripheral Equipment",
-  },
-  {
-    code: "423610",
-    title: "Electrical Equipment & Supplies",
-  },
-];
+import { competencies,differentiators,naicsCodes } from "../Constant/capabilities_download";
 
 const Capabilities_download = () => {
   return (
@@ -98,17 +32,17 @@ const Capabilities_download = () => {
 
             <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-6 text-sm text-slate-200">
               <div className="flex items-center gap-2">
-                <MapPin size={16} className="text-blue-400" />
+                <img src="/images/Capabilities/download/download01.png" alt="location" className="w-[12px] h-[18px] "/>
                 <span>1330 Brummel St Apt 2, Evanston, IL 60202-3740</span>
               </div>
 
               <div className="flex items-center gap-2">
-                <Mail size={16} className="text-blue-400" />
+                <img src="/images/Capabilities/download/download02.png" alt="location" className="w-[20px] h-[18px]"/>
                 <span>info@vaxterm.com</span>
               </div>
 
               <div className="flex items-center gap-2">
-                <Globe size={16} className="text-blue-400" />
+                <img src="/images/Capabilities/download/download03.png" alt="location" className="w-[18px] h-[18px]"/>
                 <span>www.vaxterm.com</span>
               </div>
             </div>
