@@ -2,6 +2,7 @@ import React from 'react'
 import { digitaltransformation, whyChoose, steps, testimonials, faqData , services } from '../Constant/solution';
 import { useState, useRef } from 'react';
 import { Plus, Minus,Check } from 'lucide-react';
+import { Link, Outlet } from 'react-router-dom';
 
 const Solutions = () => {
   const[activeTab,setActiveTab]=useState(services[0]);
@@ -66,15 +67,16 @@ const Solutions = () => {
               ))}
             </div>
             <div className="flex gap-4">
-              <button className='bg-[#0D7FFB] hover:bg-blue-600 px-7 py-4 rounded-lg shadow-gray-400 shadow-lg text-white text-[16px] font-medium'>Learn More</button>
+              <Link to="/solutions/enterprise" className='bg-[#0D7FFB] hover:bg-blue-600 px-7 py-4 rounded-lg shadow-gray-400 shadow-lg text-white text-[16px] font-medium'>Learn More</Link>
               <button className='bg-white hover:bg-gray-200 px-7 py-4 rounded-lg shadow-gray-400 shadow-lg text-black text-[16px] font-medium'>Start Demo</button>
+              
             </div>
           </div>
           <div className="">
             <img src={activeTab.image} alt={activeTab.Title} className='w-full lg:h-[542px] h-[400px] object-cover rounded-[15px]'/>
           </div>
         </div>
-
+              
       </section>
 
       {/* Why Choose Vaxterm Software Solutions */}
@@ -96,7 +98,7 @@ const Solutions = () => {
             {/* Right Cards */}
             <div className="grid sm:grid-cols-2 gap-4">
               {whyChoose.map((item, index) => (
-                <div className="bg-[#fff] max-w-[358px] rounded-[20px] p-8 border border-gray-400 h-[271px]">
+                <div key={index} className="bg-[#fff] max-w-[358px] rounded-[20px] p-8 border border-gray-400 h-[271px]">
                   <div className="mb-6">
                     <img
                       src={item.image}
@@ -274,6 +276,8 @@ const Solutions = () => {
           </div>
         </div>
       </section>
+      
+      <Outlet/>
     </main>
   )
 }
