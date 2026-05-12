@@ -33,34 +33,64 @@ export const services = [
   ];
 
 export const faqs = [
+
     {
+
       question: "What bookkeeping services do you offer?",
+
       answer:
+
         "We offer a full range of bookkeeping services including day-to-day transaction recording, bank reconciliation, financial reporting, and outsourced bookkeeping solutions tailored to your business needs.",
+
     },
+
     {
+
       question: "Do you work with small businesses?",
+
       answer:
-        "Yes, we provide scalable solutions for startups, small businesses, and large enterprises.",
+
+        "Yes, we specialize in helping small and medium-sized businesses with scalable bookkeeping solutions.",
+
     },
+
     {
+
       question: "How does outsourced bookkeeping work?",
+
       answer:
-        "Our team securely manages your bookkeeping remotely while keeping you updated with accurate reports.",
+
+        "We remotely handle your bookkeeping using secure systems and provide regular financial reports.",
+
     },
+
     {
+
       question: "How secure is my financial data?",
+
       answer:
-        "We use secure cloud infrastructure and industry best practices to protect your data.",
+
+        "We use encrypted systems and strict access controls to ensure full data security.",
+
     },
+
     {
+
       question: "Can your services scale as my business grows?",
+
       answer:
-        "Absolutely. Our systems are designed to scale alongside your business growth.",
+
+        "Yes, our services are fully scalable based on your business needs.",
+
     },
+
     {
+
       question: "How often will I receive financial reports?",
+
       answer:
-        "You can receive weekly, monthly, or customized reporting schedules based on your requirements.",
+
+        "Reports can be delivered weekly, monthly, or custom schedules based on your preference.",
+
     },
   ];
