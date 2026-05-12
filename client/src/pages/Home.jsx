@@ -2,90 +2,8 @@ import React from 'react'
 import { useState } from 'react'
 import { useRef } from 'react'
 import { Plus, Minus } from 'lucide-react';
-const heroData = [{
-    image: "/images/Home/Section1Hero/search-country.png",
-    number: "50+",
-    description: "Countries Served"
-}, {
-    image: "/images/Home/Section1Hero/project-outlined.png",
-    number: "700+",
-    description: "Projects Completed"
-}, {
-    image: "/images/Home/Section1Hero/partnership.png",
-    number: "120+",
-    description: "Long-Term Partners"
-}, {
-    image: "/images/Home/Section1Hero/dissatisfaction.png",
-    number: "98%",
-    description: "Client Satisfaction"
-}]
-const industries = [
-    {
-        image: "/images/Home/Section4/IWS01.png",
-        description: "Federal Government Agencies"
-    },
-    {
-        image: "/images/Home/Section4/IWS02.png",
-        description: "State & Local Government"
-    },
-    {
-        image: "/images/Home/Section4/IWS03.png",
-        description: "Industrial & Manufacturing"
-    }, {
-        image: "/images/Home/Section4/IWS04.png",
-        description: "Healthcare & Medical"
-    }, {
-        image: "/images/Home/Section4/IWS05.png",
-        description: "Education & Public Sector"
-    }, {
-        image: "/images/Home/Section4/IWS06.png",
-        description: "Enterprise & Corporate Clients"
-    }
-]
-const services = [
-    {
-        image: "/images/Home/Section3/back-in-time.png",
-        title: "Enterprise Hardware",
-        description: "High-performance IT infrastructure including enterprise servers"
-    }, {
-        image: "/images/Home/Section3/back-in-time.png",
-        title: "Advanced Software Solutions",
-        description: "Scalable SaaS platforms including CRM, ERP"
-    }, {
-        image: "/images/Home/Section3/back-in-time.png",
-        title: "Strategic Procurement",
-        description: "Global sourcing of specialized equipment, mission-critical assets, and logistics management"
-    }
-]
-const features = [
-    { label: "Knowledge of Federal\n& State Procurement" },
-    { label: "Regulatory\nCompliance Expertise" },
-    { label: "Transparent Business\nOperations" },
-    { label: "Strategic Contract\nManagement" },
-];
-const testimonials = [
-    { id: 1, name: "ENGINEER. LONDON", text: "Our IT consulting services are customized to empower businesses in enhancing their technology strategies and achieved.", image: "/images/Home/Section7/scroll01.png" },
-    { id: 2, name: "ENGINEER. SWITZERLAND", text: "Our IT consulting services are tailored to help businesses optimize their technology strategies and streamline for greater efficiency.", image: "/images/Home/Section7/scroll02.png" },
-    { id: 3, name: "FOUNDER. LONDON", text: "Our IT consulting services are designed to empower businesses in enhancing their technology strategies.", image: "/images/Home/Section7/scroll03.png" },
-    { id: 4, name: "ENGINEER. LONDON", text: "Our IT consulting services are customized to empower businesses in enhancing their technology strategies and achieved.", image: "/images/Home/Section7/scroll01.png" },
-    { id: 5, name: "ENGINEER. SWITZERLAND", text: "Our IT consulting services are tailored to help businesses optimize their technology strategies and streamline for greater efficiency.", image: "/images/Home/Section7/scroll02.png" },
-    { id: 6, name: "FOUNDER. LONDON", text: "Our IT consulting services are designed to empower businesses in enhancing their technology strategies.", image: "/images/Home/Section7/scroll03.png" },
-    { id: 7, name: "ENGINEER. LONDON", text: "Our IT consulting services are customized to empower businesses in enhancing their technology strategies and achieved.", image: "/images/Home/Section7/scroll01.png" },
-    { id: 8, name: "ENGINEER. SWITZERLAND", text: "Our IT consulting services are tailored to help businesses optimize their technology strategies and streamline for greater efficiency.", image: "/images/Home/Section7/scroll02.png" },
-    { id: 9, name: "FOUNDER. LONDON", text: "Our IT consulting services are designed to empower businesses in enhancing their technology strategies.", image: "/images/Home/Section7/scroll03.png" }
+import { heroData,faqData,features,industries,services,testimonials } from '../Constant/home';
 
-];
-const faqData = [
-    {
-        question: "What bookkeeping services do you offer?",
-        answer: "We offer a full range of bookkeeping services including day-to-day transaction recording, bank reconciliation, financial reporting, and outsourced bookkeeping solutions tailored to your business needs."
-    },
-    { question: "Do you work with small businesses?", answer: "Yes, we specialize in scaling solutions for startups and small enterprises." },
-    { question: "How does outsourced bookkeeping work?", answer: "We integrate with your existing tools to manage your books remotely and securely." },
-    { question: "How secure is my financial data?", answer: "We use bank-grade encryption and strict internal protocols to ensure your data remains private." },
-    { question: "Can your services scale as my business grows?", answer: "Absolutely. Our packages are designed to grow alongside your transaction volume." },
-    { question: "How often will I receive financial reports?", answer: "Standard reporting is monthly, but we offer weekly or real-time dashboards as well." }
-];
 const Home = () => {
 
     const [openIndex, setOpenIndex] = useState(0);
@@ -118,9 +36,10 @@ const Home = () => {
             {/* Hero */}
             <section className='relative'>
                 <div className="absolute inset-0 bg-black/40 z-10 h-[877px]"></div>
-                <img src="/images/hero.png" alt="hero" className='w-full h-[877px]' />
-                <div className="text-white border-[5px] z-20 border-r-0 pl-12 py-5 border-white max-w-[571px] absolute top-1/2 sm:left-16 left-4 lg:-translate-y-1/2 -translate-y-[70%]">
-                    <p className="lg:text-[60px] text-[40px] leading-[71px] font-bold font-dm">Innovative IT Infrastructure & Enterprise Software Solutions</p>
+                <img src="/images/hero.png" alt="hero" className='w-full h-[877px] object-cover' />
+                <div className="text-white  z-20  pl-12 py-5 max-w-[571px] absolute top-1/2 sm:left-28 left-4 lg:-translate-y-1/2 -translate-y-[100%]">
+                    <img src="images/Home/Section1Hero/heroborder.png" alt="" className='absolute lg:-left-2 -left-0 -top-4 lg:h-[458px] h-[408px]'/>
+                    <p className="lg:text-[60px] px-2 md:text-[40px] text-[35px] lg:leading-[71px] leading-[45px] font-bold font-dm">Innovative IT Infrastructure & Enterprise Software Solutions</p>
                     <div className="flex gap-4 mt-8 flex-wrap">
                         <button className="bg-blue-500 hover:bg-blue-600 text-white py-4 px-4 rounded">Get Free Consultation</button>
                         <button className="bg-white hover:bg-gray-200 text-black py-4 px-4 rounded">Explore Our Service</button>
@@ -167,7 +86,7 @@ const Home = () => {
                             <img
                                 src="/images/Home/Section2/aboutUsHome.png"
                                 alt="team"
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover rounded-[12px]"
                             />
                         </div>
 
@@ -227,7 +146,7 @@ const Home = () => {
                         <img src="/images/Home/Section3/iconTitle.png" alt="" className='w-[26px] h-[13px]' />
                         <h2 className='text-[18px] text-[#051649] '>SERVICE</h2>
                     </div>
-                    <h3 className='text-[48px] text-[#0B1422]'>OUR CORE SERVICE</h3>
+                    <h3 className='text-[48px] text-[#0B1422] max-lg:text-center'>OUR CORE SERVICE</h3>
                 </div>
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 max-w-[1182px] h-auto mt-16">
                     {services.map((item, index) => (
@@ -243,7 +162,7 @@ const Home = () => {
             </section>
             {/* INDUSTRIES WE SERVE */}
             <section className='lg:px-0 px-9 mt-28'>
-                <h2 className="text-[48px] flex justify-center mt-10">
+                <h2 className="text-[48px] max-lg:text-center flex justify-center mt-10">
                     Industries We Serve
                 </h2>
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3 max-w-[1341px] mx-auto mt-10">
@@ -262,7 +181,7 @@ const Home = () => {
                     {/* LEFT SIDE */}
                     <div>
                         {/* Heading */}
-                        <h2 className="text-[32px] md:text-[40px] lg:text-[48px] font-bold text-[#0B1B35] leading-tight mb-4">
+                        <h2 className="text-[32px] max-lg:text-center md:text-[40px] lg:text-[48px] font-bold text-[#0B1B35] leading-tight mb-4">
                             Government <br /> Procurement Ready
                         </h2>
                         {/* Description */}
@@ -331,7 +250,7 @@ const Home = () => {
                         <img
                             src="/images/Home/Section6/leader&expertise.png"
                             alt="Leadership team"
-                            className="w-[628px] sm:h-[550px] h-[360px] object-top"
+                            className="w-[628px] sm:h-[550px] h-[360px] object-cover"
                         />
 
                         <div className="absolute bottom-8 md:right-28 right-10 text-center">
@@ -418,7 +337,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className='mt-12 mb-20'>
+            <section className='mt-12 mb-20 max-lg:px-5'>
                 <div className="grid md:grid-cols-2 grid-cols-1 gap-4 max-w-[1278px] items-center mx-auto">
 
                     <div className="relative">
