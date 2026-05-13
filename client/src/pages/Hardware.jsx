@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { useRef } from 'react'
 import { Plus, Minus } from 'lucide-react';
+import {Link} from 'react-router-dom'
 import { globalOperation, testimonials, enterprisecomputing, IndustrialPower, networking, facility } from '../Constant/hardware'
 const Hardware = () => {
   const scrollRef = useRef(null);
@@ -80,9 +81,9 @@ const Hardware = () => {
                 <div className="bg-white flex flex-col justify-center gap-3 max-w-[368px] h-[253px] border border-gray-200 shadow-lg rounded-b-[17.44px] rounded-tl-[17.44px]  pl-8 pr-4 overflow-hidden">
                   <h3 className='text-[#110F0F text-[24px] font-semibold font-dm'>{item.title}</h3>
                   <p className='text-[#110F0F] text-[16px] font-dm'>{item.description}</p>
-                  <button className='text-white bg-[#3D92F7] rounded-[8px] text-[16px] font-medium px-5 py-2 w-[149px] shadow-lg shadow-gray-400'>
+                  <Link to={item.ProductButton} className='text-white bg-[#3D92F7] rounded-[8px] text-[16px] font-medium px-5 py-2 w-[149px] shadow-lg shadow-gray-400'>
                     View Product
-                  </button>
+                  </Link>
                 </div>
 
               </div>
@@ -106,9 +107,9 @@ const Hardware = () => {
                 <div className="bg-white flex flex-col justify-center gap-3 max-w-[368px] h-[253px] border border-gray-200 shadow-lg rounded-b-[17.44px] rounded-tl-[17.44px]  pl-8 pr-4 overflow-hidden">
                   <h3 className='text-[#110F0F text-[24px] font-semibold font-dm'>{item.title}</h3>
                   <p className='text-[#110F0F] text-[16px] font-dm'>{item.description}</p>
-                  <button className='text-white bg-[#3D92F7] rounded-[8px] text-[16px] font-medium px-5 py-2 w-[149px] shadow-lg shadow-gray-400'>
+                  <Link className='text-white bg-[#3D92F7] rounded-[8px] text-[16px] font-medium px-5 py-2 w-[149px] shadow-lg shadow-gray-400'>
                     View Product
-                  </button>
+                  </Link>
                 </div>
 
               </div>

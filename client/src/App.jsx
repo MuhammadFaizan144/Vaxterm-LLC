@@ -13,6 +13,7 @@ import Capabilities from './pages/Capabilities'
 import Contact from './pages/Contact'
 import Solution_enterprise from './pages/Solution_enterprise'
 import Capabilities_download from './pages/Capabilities_download'
+import HardwareWorkstationsLaptops from './pages/HardwareWorkstationsLaptops'
 
 const AppContent = () => {
   const location = useLocation()
@@ -34,6 +35,8 @@ const AppContent = () => {
         />
 
         <Route path='/hardware' element={<Hardware />} />
+        <Route path='/hardware/WorkstationsLaptops' element={<HardwareWorkstationsLaptops/>} />
+        
         <Route path='/procurement' element={<Procurement />} />
 
         <Route path='/capabilities' element={<Capabilities />} />

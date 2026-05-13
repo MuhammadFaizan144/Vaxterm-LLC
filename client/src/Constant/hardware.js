@@ -22,17 +22,20 @@ export const enterprisecomputing=[
     {
         image:"/images/Hardware/section03/ec01.png",
         title:"Server Infrastructure",
-        description:"High-availability rack and tower servers designed for enterprise environments, data centers."
+        description:"High-availability rack and tower servers designed for enterprise environments, data centers.",
+        ProductButton:"/hardware"
     },
     {
         image:"/images/Hardware/section03/ec02.png",
         title:"Workstations & Laptops",
-        description:"Professional-grade computing devices engineered for high-performance workloads, including engineering, analytics."
+        description:"Professional-grade computing devices engineered for high-performance workloads, including engineering, analytics.",
+        ProductButton:"/hardware/WorkstationsLaptops"
     },
     {
         image:"/images/Hardware/section03/ec03.png",
         title:"Data Storage Solutions",
-        description:"Advanced NAS and SAN storage systems that provide secure, scalable, and efficient data management."
+        description:"Advanced NAS and SAN storage systems that provide secure, scalable, and efficient data management.",
+        ProductButton:"/hardware"
     }
 ]
 export const IndustrialPower=[
