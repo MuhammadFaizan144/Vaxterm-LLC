@@ -99,22 +99,22 @@ const HardwareLaptopShop = () => {
 
                         {/* Right Content */}
                         <div className="pt-2">
-                            <span className="inline-flex h-[58px] w-[190px] items-center justify-center rounded-full border border-gray-300 text-[24px] font-bold">
+                            <span className="inline-flex h-[65px] w-[215px] items-center justify-center rounded-full border border-gray-300 text-[24px] font-bold">
                                 LAPTOP
                             </span>
 
-                            <h1 className="mt-5 text-[26px] font-extrabold uppercase leading-tight text-black md:text-[30px]">
+                            <h1 className="mt-5 text-[28px] font-bold uppercase leading-tight text-black md:text-[30px]">
                                 VX-ELITE BUSINESS LAPTOP PRO
                             </h1>
 
-                            <p className="mt-3 max-w-[560px] text-[15px] font-medium leading-5 text-gray-500">
+                            <p className="mt-3 max-w-[560px] text-[16px]  leading-5 text-[#585C59]">
                                 Reliable and secure laptop built for corporate environments and
                                 administrative operations.
                             </p>
 
                             <div className="mt-8 flex flex-wrap items-center justify-between gap-4">
                                 <div className="flex items-center gap-4">
-                                    <span className="text-[22px] font-bold text-gray-400 line-through">
+                                    <span className="text-[24px] font-semibold text-gray-400 line-through">
                                         $44.99
                                     </span>
                                     <span className="text-[32px] font-bold text-black">$24.99</span>
@@ -141,12 +141,12 @@ const HardwareLaptopShop = () => {
 
                             <h3 className="mt-7 text-[24px] font-bold">Select Size</h3>
 
-                            <div className="mt-5 flex flex-wrap gap-3">
+                            <div className="mt-5 flex flex-wrap gap-2">
                                 {["S", "M", "L", "XL", "XXL"].map((item) => (
                                     <button
                                         key={item}
                                         onClick={() => setSize(item)}
-                                        className={`h-[52px] min-w-[100px] rounded-full text-[22px] font-semibold ${size === item
+                                        className={`h-[59px] min-w-[116px] rounded-full text-[22px] font-semibold ${size === item
                                                 ? "bg-black text-white"
                                                 : "bg-[#F5F5F5] text-black"
                                             }`}
@@ -157,11 +157,11 @@ const HardwareLaptopShop = () => {
                             </div>
 
                             <div className="mt-7 flex items-center gap-3">
-                                <button className="h-[64px] flex-1 rounded-md bg-[#3B8FF3] text-[18px] font-semibold text-white shadow-lg">
+                                <button className="h-[71px]  flex-1 rounded-md bg-[#0D7FFB] text-[18px] font-semibold text-white shadow-lg shadow-gray-400">
                                     Get Free Quote
                                 </button>
 
-                                <button className="flex h-[64px] w-[64px] items-center justify-center rounded-full border border-gray-300">
+                                <button className="flex h-[72px] w-[72px] items-center justify-center rounded-full border border-gray-300">
                                     <Heart size={28} />
                                 </button>
                             </div>
@@ -169,7 +169,7 @@ const HardwareLaptopShop = () => {
                             <div className="mt-7 rounded-[18px] border border-gray-300 p-6 md:p-7">
                                 <h3 className="text-[24px] font-bold">Description</h3>
 
-                                <p className="mt-5 text-[18px] leading-[30px] text-gray-500">
+                                <p className="mt-5 text-[20px] leading-[30px] text-gray-500">
                                     The VX–Elite Business Laptop Pro is a dependable and
                                     performance-driven computing solution designed to meet the
                                     evolving demands of modern corporate environments. Engineered
@@ -189,19 +189,19 @@ const HardwareLaptopShop = () => {
 
                     {/* Reviews */}
                     <div className="mt-16">
-                        <h2 className="text-[34px] font-extrabold text-black md:text-[40px]">
+                        <h2 className="text-[34px] font-semibold text-black md:text-[40px]">
                             Rating & Reviews
                         </h2>
 
                         <div className="mt-8 grid gap-4 lg:grid-cols-[298px_542px]">
                             <div className="flex h-[230px] flex-col items-center justify-center rounded-md bg-white shadow-lg">
-                                <h3 className="text-[56px] font-bold">4.8</h3>
+                                <h3 className="text-[60px] font-bold">4.8</h3>
 
                                 <div className="mt-2 flex gap-1">
                                     {Array.from({ length: 5 }).map((_, index) => (
                                         <Star
                                             key={index}
-                                            size={18}
+                                            size={14}
                                             className="fill-black text-black"
                                         />
                                     ))}
@@ -225,13 +225,13 @@ const HardwareLaptopShop = () => {
                                                 {Array.from({ length: 5 }).map((_, i) => (
                                                     <Star
                                                         key={i}
-                                                        size={11}
+                                                        size={10}
                                                         className="fill-black text-black"
                                                     />
                                                 ))}
                                             </div>
 
-                                            <span className="w-[38px] text-[16px] font-medium text-[#6A8CEB]">
+                                            <span className="w-[38px] text-[16px] text-[#6A8CEB]">
                                                 {item.percent}%
                                             </span>
                                         </div>

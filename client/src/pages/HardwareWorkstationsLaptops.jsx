@@ -119,7 +119,7 @@ const HardwareWorkstationsLaptops = () => {
       </section>
       <section className="w-full bg-white px-4 py-10 md:px-8 lg:px-16">
         <div className="mx-auto max-w-[1280px]">
-          <h2 className="mb-7 text-[36px] font-semibold text-black md:text-[52px]">
+          <h2 className="mb-7 text-[36px] text-black md:text-[64px]">
             All Products
           </h2>
 
@@ -127,7 +127,7 @@ const HardwareWorkstationsLaptops = () => {
             {/* Sidebar */}
             <aside className="space-y-4">
               <div className="rounded-lg border border-gray-300 bg-white p-5">
-                <h3 className="mb-5 text-[15px] font-bold text-[#0F172A]">
+                <h3 className="mb-5 text-[19.01px] font-semibold text-[#040B2F]">
                   All Catagory
                 </h3>
 
@@ -140,23 +140,23 @@ const HardwareWorkstationsLaptops = () => {
                     key={cat}
                     className={`mb-3 flex h-[42px] w-full items-center justify-between rounded-full border px-4 text-[12px] font-semibold ${index === 1
                       ? "border-[#3B8FF3] bg-[#3B8FF3] text-white"
-                      : "border-gray-200 bg-white text-[#0F172A]"
+                      : "border-gray-200 bg-white text-[#040B2F]"
                       }`}
                   >
                     {cat}
-                    <ArrowRight size={15} />
+                    <ArrowRight size={19} />
                   </button>
                 ))}
               </div>
 
               <div className="rounded-lg border border-gray-300 bg-white p-5">
                 <div className="mb-5 flex items-center justify-between">
-                  <h3 className="text-[16px] font-bold">Availability</h3>
-                  <ChevronUp size={16} />
+                  <h3 className="text-[19.01px] font-semibold text-[#040B2F]">Availability</h3>
+                  <ChevronUp size={18} />
                 </div>
 
                 <div className="flex gap-3">
-                  <button className="rounded-full bg-[#3B8FF3] px-6 py-2 text-[12px] text-white">
+                  <button className="rounded-full bg-[#3B8FF3] px-7 py-2 text-[12px] text-white">
                     In Stock
                   </button>
                   <button className="rounded-full border border-gray-300 px-6 py-2 text-[12px] text-black">
@@ -167,8 +167,8 @@ const HardwareWorkstationsLaptops = () => {
                 <hr className="my-6" />
 
                 <div className="mb-4 flex items-center justify-between">
-                  <h3 className="text-[16px] font-bold">Price</h3>
-                  <ChevronUp size={16} />
+                  <h3 className="text-[17.4px] font-semibold font-dm">Price</h3>
+                  <ChevronUp size={18} />
                 </div>
 
                 <input
@@ -187,8 +187,8 @@ const HardwareWorkstationsLaptops = () => {
                 <hr className="my-6" />
 
                 <div className="mb-5 flex items-center justify-between">
-                  <h3 className="text-[16px] font-bold">Feature Products</h3>
-                  <ChevronUp size={16} />
+                  <h3 className="text-[17.4px] font-semibold font-dm">Feature Products</h3>
+                  <ChevronUp size={18} />
                 </div>
 
                 <div className="space-y-5">
@@ -200,16 +200,16 @@ const HardwareWorkstationsLaptops = () => {
                         className="h-[55px] w-[70px] object-contain"
                       />
                       <div>
-                        <h4 className="text-[13px] font-semibold">
+                        <h4 className="text-[17.4px] font-bold font-dm">
                           Vaxterm LLC Laptop
                         </h4>
-                        <p className="text-[18px] font-bold">
+                        <p className="text-[19px] font-bold">
                           $24.99{" "}
-                          <span className="text-[12px] text-gray-400 line-through">
+                          <span className="text-[14px] text-gray-400 line-through">
                             $44.99
                           </span>
                         </p>
-                        <div className="flex gap-5 text-[8px] font-semibold">
+                        <div className="flex gap-5 text-[9px] font-semibold">
                           <span>Mochallegance</span>
                           <span>15k Sold</span>
                         </div>
