@@ -4,20 +4,20 @@ import { Search, ArrowRight, ChevronUp, Star } from "lucide-react";
 import { useState } from 'react'
 import { useRef } from 'react'
 import { Plus, Minus } from 'lucide-react'
-
+import {Link} from 'react-router-dom'
 const products = [
-  { img: "/images/Hardware/shop/workStation&laptop/c1r1.png", title: "VX–Pro Engineering Workstation X1", price: "$110" },
-  { img: "/images/Hardware/shop/workStation&laptop/c2r1.png", title: "VX–Elite Business Laptop Pro", price: "$245" },
-  { img: "/images/Hardware/shop/workStation&laptop/c3r1.png", title: "VX–Mobile Performance Laptop Z5", price: "$109" },
-  { img: "/images/Hardware/shop/workStation&laptop/c1r2.png", title: "VX–Pro Engineering Workstation X1", price: "$780" },
-  { img: "/images/Hardware/shop/workStation&laptop/c2r1.png", title: "VX–Elite Business Laptop Pro", price: "$110" },
-  { img: "/images/Hardware/shop/workStation&laptop/c3r1.png", title: "VX–Mobile Performance Laptop Z5", price: "$152" },
-  { img: "/images/Hardware/shop/workStation&laptop/c1r2.png", title: "VX–Pro Engineering Workstation X1", price: "$132" },
-  { img: "/images/Hardware/shop/workStation&laptop/c2r1.png", title: "VX–Elite Business Laptop Pro", price: "$123" },
-  { img: "/images/Hardware/shop/workStation&laptop/c3r1.png", title: "VX–Mobile Performance Laptop Z5", price: "$141" },
-  { img: "/images/Hardware/shop/workStation&laptop/c1r4.png", title: "VX–Pro Engineering Workstation X1", price: "$110" },
-  { img: "/images/Hardware/shop/workStation&laptop/c2r1.png", title: "VX–Elite Business Laptop Pro", price: "$110" },
-  { img: "/images/Hardware/shop/workStation&laptop/c3r1.png", title: "VX–Mobile Performance Laptop Z5", price: "$152" },
+  { img: "/images/Hardware/shop/workStation&laptop/c1r1.png", title: "VX–Pro Engineering Workstation X1", price: "$110",details:"/hardware" },
+  { img: "/images/Hardware/shop/workStation&laptop/c2r1.png", title: "VX–Elite Business Laptop Pro", price: "$245",details:"/hardware/product" },
+  { img: "/images/Hardware/shop/workStation&laptop/c3r1.png", title: "VX–Mobile Performance Laptop Z5", price: "$109" ,details:"/hardware"},
+  { img: "/images/Hardware/shop/workStation&laptop/c1r2.png", title: "VX–Pro Engineering Workstation X1", price: "$780",details:"/hardware" },
+  { img: "/images/Hardware/shop/workStation&laptop/c2r1.png", title: "VX–Elite Business Laptop Pro", price: "$110" ,details:"/hardware/product"},
+  { img: "/images/Hardware/shop/workStation&laptop/c3r1.png", title: "VX–Mobile Performance Laptop Z5", price: "$152",details:"/hardware" },
+  { img: "/images/Hardware/shop/workStation&laptop/c1r2.png", title: "VX–Pro Engineering Workstation X1", price: "$132" ,details:"/hardware"},
+  { img: "/images/Hardware/shop/workStation&laptop/c2r1.png", title: "VX–Elite Business Laptop Pro", price: "$123" ,details:"/hardware/product"},
+  { img: "/images/Hardware/shop/workStation&laptop/c3r1.png", title: "VX–Mobile Performance Laptop Z5", price: "$141",details:"/hardware" },
+  { img: "/images/Hardware/shop/workStation&laptop/c1r4.png", title: "VX–Pro Engineering Workstation X1", price: "$110" ,details:"/hardware"},
+  { img: "/images/Hardware/shop/workStation&laptop/c2r1.png", title: "VX–Elite Business Laptop Pro", price: "$110",details:"/hardware/product" },
+  { img: "/images/Hardware/shop/workStation&laptop/c3r1.png", title: "VX–Mobile Performance Laptop Z5", price: "$152" ,details:"/hardware"},
 ];
 
 const featured = [
@@ -26,27 +26,27 @@ const featured = [
   "/images/Hardware/shop/workStation&laptop/lp03.png",
 ];
 export const testimonials = [
-    { id: 1, name: "ENGINEER. LONDON", text: "Our IT consulting services are customized to empower businesses in enhancing their technology strategies and achieved.", image: "/images/Home/Section7/scroll01.png" },
-    { id: 2, name: "ENGINEER. SWITZERLAND", text: "Our IT consulting services are tailored to help businesses optimize their technology strategies and streamline for greater efficiency.", image: "/images/Home/Section7/scroll02.png" },
-    { id: 3, name: "FOUNDER. LONDON", text: "Our IT consulting services are designed to empower businesses in enhancing their technology strategies.", image: "/images/Home/Section7/scroll03.png" },
-    { id: 4, name: "ENGINEER. LONDON", text: "Our IT consulting services are customized to empower businesses in enhancing their technology strategies and achieved.", image: "/images/Home/Section7/scroll01.png" },
-    { id: 5, name: "ENGINEER. SWITZERLAND", text: "Our IT consulting services are tailored to help businesses optimize their technology strategies and streamline for greater efficiency.", image: "/images/Home/Section7/scroll02.png" },
-    { id: 6, name: "FOUNDER. LONDON", text: "Our IT consulting services are designed to empower businesses in enhancing their technology strategies.", image: "/images/Home/Section7/scroll03.png" },
-    { id: 7, name: "ENGINEER. LONDON", text: "Our IT consulting services are customized to empower businesses in enhancing their technology strategies and achieved.", image: "/images/Home/Section7/scroll01.png" },
-    { id: 8, name: "ENGINEER. SWITZERLAND", text: "Our IT consulting services are tailored to help businesses optimize their technology strategies and streamline for greater efficiency.", image: "/images/Home/Section7/scroll02.png" },
-    { id: 9, name: "FOUNDER. LONDON", text: "Our IT consulting services are designed to empower businesses in enhancing their technology strategies.", image: "/images/Home/Section7/scroll03.png" }
+  { id: 1, name: "ENGINEER. LONDON", text: "Our IT consulting services are customized to empower businesses in enhancing their technology strategies and achieved.", image: "/images/Home/Section7/scroll01.png" },
+  { id: 2, name: "ENGINEER. SWITZERLAND", text: "Our IT consulting services are tailored to help businesses optimize their technology strategies and streamline for greater efficiency.", image: "/images/Home/Section7/scroll02.png" },
+  { id: 3, name: "FOUNDER. LONDON", text: "Our IT consulting services are designed to empower businesses in enhancing their technology strategies.", image: "/images/Home/Section7/scroll03.png" },
+  { id: 4, name: "ENGINEER. LONDON", text: "Our IT consulting services are customized to empower businesses in enhancing their technology strategies and achieved.", image: "/images/Home/Section7/scroll01.png" },
+  { id: 5, name: "ENGINEER. SWITZERLAND", text: "Our IT consulting services are tailored to help businesses optimize their technology strategies and streamline for greater efficiency.", image: "/images/Home/Section7/scroll02.png" },
+  { id: 6, name: "FOUNDER. LONDON", text: "Our IT consulting services are designed to empower businesses in enhancing their technology strategies.", image: "/images/Home/Section7/scroll03.png" },
+  { id: 7, name: "ENGINEER. LONDON", text: "Our IT consulting services are customized to empower businesses in enhancing their technology strategies and achieved.", image: "/images/Home/Section7/scroll01.png" },
+  { id: 8, name: "ENGINEER. SWITZERLAND", text: "Our IT consulting services are tailored to help businesses optimize their technology strategies and streamline for greater efficiency.", image: "/images/Home/Section7/scroll02.png" },
+  { id: 9, name: "FOUNDER. LONDON", text: "Our IT consulting services are designed to empower businesses in enhancing their technology strategies.", image: "/images/Home/Section7/scroll03.png" }
 
 ];
 export const faqData = [
-    {
-        question: "What bookkeeping services do you offer?",
-        answer: "We offer a full range of bookkeeping services including day-to-day transaction recording, bank reconciliation, financial reporting, and outsourced bookkeeping solutions tailored to your business needs."
-    },
-    { question: "Do you work with small businesses?", answer: "Yes, we specialize in scaling solutions for startups and small enterprises." },
-    { question: "How does outsourced bookkeeping work?", answer: "We integrate with your existing tools to manage your books remotely and securely." },
-    { question: "How secure is my financial data?", answer: "We use bank-grade encryption and strict internal protocols to ensure your data remains private." },
-    { question: "Can your services scale as my business grows?", answer: "Absolutely. Our packages are designed to grow alongside your transaction volume." },
-    { question: "How often will I receive financial reports?", answer: "Standard reporting is monthly, but we offer weekly or real-time dashboards as well." }
+  {
+    question: "What bookkeeping services do you offer?",
+    answer: "We offer a full range of bookkeeping services including day-to-day transaction recording, bank reconciliation, financial reporting, and outsourced bookkeeping solutions tailored to your business needs."
+  },
+  { question: "Do you work with small businesses?", answer: "Yes, we specialize in scaling solutions for startups and small enterprises." },
+  { question: "How does outsourced bookkeeping work?", answer: "We integrate with your existing tools to manage your books remotely and securely." },
+  { question: "How secure is my financial data?", answer: "We use bank-grade encryption and strict internal protocols to ensure your data remains private." },
+  { question: "Can your services scale as my business grows?", answer: "Absolutely. Our packages are designed to grow alongside your transaction volume." },
+  { question: "How often will I receive financial reports?", answer: "Standard reporting is monthly, but we offer weekly or real-time dashboards as well." }
 ];
 const ProductCard = ({ item }) => {
   return (
@@ -73,9 +73,9 @@ const ProductCard = ({ item }) => {
           <button className="h-[34px] rounded-md bg-[#3B8FF3] text-[11px] font-semibold text-white">
             Get Free Quote
           </button>
-          <button className="h-[34px] rounded-md border border-[#3B8FF3] text-[11px] font-semibold text-[#3B8FF3]">
+          <Link to={item.details} className="h-[34px] flex justify-center items-center rounded-md border border-[#3B8FF3] text-[11px] font-semibold text-[#3B8FF3]">
             View Details
-          </button>
+          </Link>
         </div>
       </div>
     </div>
@@ -83,30 +83,30 @@ const ProductCard = ({ item }) => {
 };
 const HardwareWorkstationsLaptops = () => {
   const [openIndex, setOpenIndex] = useState(0);
-      const scrollRef = useRef(null);
-      const [activeDot, setActiveDot] = useState(0);
-  
-      // Function to scroll to a specific index
-      const scrollTo = (index) => {
-          const container = scrollRef.current;
-          if (container) {
-              const cardWidth = container.offsetWidth / 3; // Approximation for desktop
-              container.scrollTo({
-                  left: index * cardWidth,
-                  behavior: 'smooth',
-              });
-              setActiveDot(index);
-          }
-      };
-  
-      // Sync dots if user scrolls manually
-      const handleScroll = () => {
-          const container = scrollRef.current;
-          if (container) {
-              const index = Math.round(container.scrollLeft / (container.offsetWidth / 3));
-              setActiveDot(index);
-          }
-      };
+  const scrollRef = useRef(null);
+  const [activeDot, setActiveDot] = useState(0);
+
+  // Function to scroll to a specific index
+  const scrollTo = (index) => {
+    const container = scrollRef.current;
+    if (container) {
+      const cardWidth = container.offsetWidth / 3; // Approximation for desktop
+      container.scrollTo({
+        left: index * cardWidth,
+        behavior: 'smooth',
+      });
+      setActiveDot(index);
+    }
+  };
+
+  // Sync dots if user scrolls manually
+  const handleScroll = () => {
+    const container = scrollRef.current;
+    if (container) {
+      const index = Math.round(container.scrollLeft / (container.offsetWidth / 3));
+      setActiveDot(index);
+    }
+  };
   return (
     <main>
       <section>
@@ -139,8 +139,8 @@ const HardwareWorkstationsLaptops = () => {
                   <button
                     key={cat}
                     className={`mb-3 flex h-[42px] w-full items-center justify-between rounded-full border px-4 text-[12px] font-semibold ${index === 1
-                        ? "border-[#3B8FF3] bg-[#3B8FF3] text-white"
-                        : "border-gray-200 bg-white text-[#0F172A]"
+                      ? "border-[#3B8FF3] bg-[#3B8FF3] text-white"
+                      : "border-gray-200 bg-white text-[#0F172A]"
                       }`}
                   >
                     {cat}
@@ -253,56 +253,56 @@ const HardwareWorkstationsLaptops = () => {
       </section>
       {/* What Clients Say Our Services */}
       <section>
-                      <h3 className="text-[48px] text-center mt-16 mb-20 font-bold leading-tight ">
-                          What Clients Say Our <br /> Services
-                      </h3>
-                      <div className="max-w-7xl mx-auto px-4 py-10">
-                          {/* Scroll Container */}
-                          <div
-                              ref={scrollRef}
-                              onScroll={handleScroll}
-                              className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-8"
-                              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-                          >
-                              {testimonials.map((item) => (
-                                  <div
-                                      key={item.id}
-                                      className="min-w-[90%] md:min-w-[45%] lg:min-w-[39%] snap-center bg-[#F4F7F9] rounded-[24px] p-8 md:p-10 relative flex flex-col"
-                                  >
-                                      <div className="flex justify-between items-start mb-8">
-                                          <img src={item.image} alt="" className="size-[120px] rounded-full" />
-                                          <img src="/images/Home/Section7/quote_Icon.png" alt="" className='w-[42px] h-[34px]' />
-                                      </div>
-      
-                                      <p className="text-[#0B1422] text-[20px] font-medium leading-relaxed mb-10">
-                                          "{item.text}"
-                                      </p>
-      
-                                      <div>
-                                          <h4 className="text-[16px] font-bold leading-[26px] text-[#0B1422] mb-2">{item.name}</h4>
-                                          <div className="flex gap-1 text-orange-400">
-                                              {[...Array(5)].map((_, i) => <span key={i}>★</span>)}
-                                          </div>
-                                      </div>
-                                  </div>
-                              ))}
-                          </div>
-      
-                          {/* Pagination Dots */}
-                          <div className="flex justify-center items-center gap-3 mt-8">
-                              {[...Array(8)].map((_, i) => (
-                                  <button
-                                      key={i}
-                                      onClick={() => scrollTo(i)}
-                                      className={`transition-all duration-300 rounded-full border-2 ${activeDot === i
-                                          ? "w-4 h-4 bg-[#3B82F6] border-[#3B82F6]"
-                                          : "w-3 h-3 bg-white border-gray-300"
-                                          }`}
-                                  />
-                              ))}
-                          </div>
-                      </div>
-                  </section>
+        <h3 className="text-[48px] text-center mt-16 mb-20 font-bold leading-tight ">
+          What Clients Say Our <br /> Services
+        </h3>
+        <div className="max-w-7xl mx-auto px-4 py-10">
+          {/* Scroll Container */}
+          <div
+            ref={scrollRef}
+            onScroll={handleScroll}
+            className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-8"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            {testimonials.map((item) => (
+              <div
+                key={item.id}
+                className="min-w-[90%] md:min-w-[45%] lg:min-w-[39%] snap-center bg-[#F4F7F9] rounded-[24px] p-8 md:p-10 relative flex flex-col"
+              >
+                <div className="flex justify-between items-start mb-8">
+                  <img src={item.image} alt="" className="size-[120px] rounded-full" />
+                  <img src="/images/Home/Section7/quote_Icon.png" alt="" className='w-[42px] h-[34px]' />
+                </div>
+
+                <p className="text-[#0B1422] text-[20px] font-medium leading-relaxed mb-10">
+                  "{item.text}"
+                </p>
+
+                <div>
+                  <h4 className="text-[16px] font-bold leading-[26px] text-[#0B1422] mb-2">{item.name}</h4>
+                  <div className="flex gap-1 text-orange-400">
+                    {[...Array(5)].map((_, i) => <span key={i}>★</span>)}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Pagination Dots */}
+          <div className="flex justify-center items-center gap-3 mt-8">
+            {[...Array(8)].map((_, i) => (
+              <button
+                key={i}
+                onClick={() => scrollTo(i)}
+                className={`transition-all duration-300 rounded-full border-2 ${activeDot === i
+                  ? "w-4 h-4 bg-[#3B82F6] border-[#3B82F6]"
+                  : "w-3 h-3 bg-white border-gray-300"
+                  }`}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
     </main>
   )
 }

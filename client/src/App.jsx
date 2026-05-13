@@ -14,6 +14,7 @@ import Contact from './pages/Contact'
 import Solution_enterprise from './pages/Solution_enterprise'
 import Capabilities_download from './pages/Capabilities_download'
 import HardwareWorkstationsLaptops from './pages/HardwareWorkstationsLaptops'
+import HardwareLaptopShop from './pages/HardwareLaptopShop'
 
 const AppContent = () => {
   const location = useLocation()
@@ -36,6 +37,7 @@ const AppContent = () => {
 
         <Route path='/hardware' element={<Hardware />} />
         <Route path='/hardware/WorkstationsLaptops' element={<HardwareWorkstationsLaptops/>} />
+        <Route path='/hardware/product' element={<HardwareLaptopShop/>} />
         
         <Route path='/procurement' element={<Procurement />} />
 
