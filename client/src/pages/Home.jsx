@@ -57,8 +57,8 @@ const Home = () => {
                     <img src="images/Home/Section1Hero/heroborder.png" alt="" className='absolute lg:-left-2 -left-0 -top-4 lg:h-[458px] h-[408px]' />
                     <p className="lg:text-[60px] px-2 md:text-[40px] text-[35px] lg:leading-[71px] leading-[45px] font-bold font-dm">Innovative IT Infrastructure & Enterprise Software Solutions</p>
                     <div className="flex gap-4 mt-8 flex-wrap">
-                        <button className="bg-blue-500 hover:bg-blue-600 text-white py-4 px-4 rounded">Get Free Consultation</button>
-                        <button className="bg-white hover:bg-gray-200 text-black py-4 sm:px-4 px-6 rounded">Explore Our Service</button>
+                        <button className="bg-blue-500 hover:bg-blue-600 text-white max-sm:w-[80%] py-4 px-4 rounded">Get Free Consultation</button>
+                        <button className="bg-white hover:bg-gray-200 text-black py-4 max-sm:w-[80%] sm:px-4 px-6 rounded">Explore Our Service</button>
                     </div>
                 </div>
                 <div className="max-w-[1141px] mx-auto px-4 -mt-10 relative z-10">
