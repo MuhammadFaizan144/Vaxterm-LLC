@@ -89,7 +89,7 @@ const Home = () => {
                             </p>
 
                             <div className="flex flex-wrap gap-2 bg-gray-100 rounded-2xl sm:rounded-full px-2 py-2 max-w-[503px] mb-6 border border-gray-400 text-[14px] sm:text-[16px] md:text-[20px]">
-                                <button className="flex-1 min-w-[120px] px-4 py-2 rounded-full hover:bg-[#388EF6] hover:text-white text-[#191D28]">
+                                <button className="flex-1 min-w-[120px] px-4 py-2 rounded-full bg-[#388EF6] hover:bg-gray-100  hover:text-[#191D28] text-white">
                                     Our Mission
                                 </button>
                                 <button className="flex-1 min-w-[120px] px-4 py-2 rounded-full hover:bg-[#388EF6] hover:text-white text-[#191D28]">
@@ -126,7 +126,7 @@ const Home = () => {
                                 ))}
                             </div>
 
-                            <button className="p-3 bg-[#388EF6] text-white w-[123px] rounded-[7.95px] mt-8 lg:mt-12">
+                            <button className="p-3 bg-[#388EF6] text-white w-[123px] rounded-[7.95px] mt-8 lg:mt-12 shadow-lg shadow-gray-400">
                                 Learn More
                             </button>
                         </div>
