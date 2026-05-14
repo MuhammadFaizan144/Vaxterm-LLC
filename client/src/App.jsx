@@ -15,6 +15,7 @@ import Solution_enterprise from './pages/Solution_enterprise'
 import Capabilities_download from './pages/Capabilities_download'
 import HardwareWorkstationsLaptops from './pages/HardwareWorkstationsLaptops'
 import HardwareLaptopShop from './pages/HardwareLaptopShop'
+import GetFreeQuote from './pages/GetFreeQuote'
 
 const AppContent = () => {
   const location = useLocation()
@@ -48,6 +49,7 @@ const AppContent = () => {
         />
 
         <Route path='/contact' element={<Contact />} />
+        <Route path="/get-free-quote" element={<GetFreeQuote/>} />
       </Routes>
 
        <Footer />

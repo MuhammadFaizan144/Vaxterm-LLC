@@ -13,6 +13,7 @@ const Navbar = () => {
     { name: "Procurement", link: "/procurement" },
     { name: "Capabilities", link: "/capabilities" },
     { name: "Contact", link: "/contact" },
+
   ]
 
   const activeLink = ({ isActive }) =>
@@ -47,7 +48,7 @@ const Navbar = () => {
 
         {/* CTA Button (Desktop) */}
         <Link
-          to="/free-quote"
+          to="/get-free-quote"
           className="hidden lg:block bg-[#0D7FFB] text-white rounded-[8px] text-[16px] xl:py-3 py-2 xl:px-5 px-3"
         >
           Get Free Quote
@@ -77,7 +78,7 @@ const Navbar = () => {
           ))}
 
           <Link
-            to="/free-quote"
+            to="/get-free-quote"
             className="bg-[#0D7FFB] text-white text-center rounded-[8px] py-3"
             onClick={() => setOpen(false)}
           >

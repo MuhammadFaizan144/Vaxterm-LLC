@@ -7,9 +7,15 @@ import {
     industries,
     services,
     testimonials,
+    aboutTabs
 } from "../Constant/home";
 
 const Home = () => {
+    // about
+    const [activeTab, setActiveTab] = useState("mission");
+
+  const currentTab = aboutTabs[activeTab];
+
     const [openIndex, setOpenIndex] = useState(0);
     const scrollRef = useRef(null);
     const [activeDot, setActiveDot] = useState(0);
@@ -52,7 +58,7 @@ const Home = () => {
                     <p className="lg:text-[60px] px-2 md:text-[40px] text-[35px] lg:leading-[71px] leading-[45px] font-bold font-dm">Innovative IT Infrastructure & Enterprise Software Solutions</p>
                     <div className="flex gap-4 mt-8 flex-wrap">
                         <button className="bg-blue-500 hover:bg-blue-600 text-white py-4 px-4 rounded">Get Free Consultation</button>
-                        <button className="bg-white hover:bg-gray-200 text-black py-4 px-4 rounded">Explore Our Service</button>
+                        <button className="bg-white hover:bg-gray-200 text-black py-4 sm:px-4 px-6 rounded">Explore Our Service</button>
                     </div>
                 </div>
                 <div className="max-w-[1141px] mx-auto px-4 -mt-10 relative z-10">
@@ -72,67 +78,120 @@ const Home = () => {
 
             {/* About Us */}
             <section className="px-4">
-                <div className="max-w-[1141px] w-full bg-white mx-auto rounded-2xl mt-16 lg:mt-24">
-                    <div className="flex flex-col lg:flex-row">
-                        <div className="w-full lg:w-1/2 p-0 sm:p-4 lg:p-0">
-                            <img
-                                src="/images/Home/Section2/aboutUsHome.png"
-                                alt="team"
-                                className="w-full h-[300px] sm:h-[420px] lg:h-full object-cover rounded-[12px]"
-                            />
-                        </div>
 
-                        <div className="w-full lg:w-1/2 p-4 sm:p-6 lg:p-10 flex flex-col justify-center">
-                            <p className="text-[#191D28] text-[16px] sm:text-[18px] mb-4 flex items-center gap-2">
-                                <img src="/images/Home/Section2/iconTitle.png" alt="" />
-                                ABOUT US
-                            </p>
+      <div className="max-w-[1141px] w-full bg-white mx-auto rounded-2xl mt-16 lg:mt-24">
 
-                            <div className="flex flex-wrap gap-2 bg-gray-100 rounded-2xl sm:rounded-full px-2 py-2 max-w-[503px] mb-6 border border-gray-400 text-[14px] sm:text-[16px] md:text-[20px]">
-                                <button className="flex-1 min-w-[120px] px-4 py-2 rounded-full bg-[#388EF6] hover:bg-gray-100  hover:text-[#191D28] text-white">
-                                    Our Mission
-                                </button>
-                                <button className="flex-1 min-w-[120px] px-4 py-2 rounded-full hover:bg-[#388EF6] hover:text-white text-[#191D28]">
-                                    Our Vision
-                                </button>
-                                <button className="flex-1 min-w-[120px] px-4 py-2 rounded-full hover:bg-[#388EF6] hover:text-white text-[#191D28]">
-                                    Our Story
-                                </button>
-                            </div>
+        <div className="flex flex-col lg:flex-row">
 
-                            <p className="text-gray-700 text-[15px] sm:text-[17px] lg:text-[18px] mb-6 leading-relaxed">
-                                Vaxterm LLC is an Evanston, Illinois-based technology firm
-                                delivering reliable, scalable, and compliant IT solutions to
-                                enterprise and government clients. We specialize in strategic
-                                sourcing, enterprise hardware deployment, and cloud-based
-                                software implementation.
-                            </p>
+          {/* Left Image */}
 
-                            <div className="space-y-3">
-                                {[
-                                    "Trusted Government Vendor",
-                                    "Enterprise-Grade Technology",
-                                    "Global Procurement Network",
-                                ].map((text, index) => (
-                                    <div
-                                        key={index}
-                                        className="flex items-start gap-3 text-[15px] sm:text-[18px] lg:text-[20px] text-gray-800"
-                                    >
-                                        <span className="w-5 h-5 mt-1 flex-shrink-0 flex items-center justify-center bg-blue-500 text-white rounded-full text-sm">
-                                            ✓
-                                        </span>
-                                        <span>{text}</span>
-                                    </div>
-                                ))}
-                            </div>
+          <div className="w-full lg:w-1/2 p-0 sm:p-4 lg:p-0">
 
-                            <button className="p-3 bg-[#388EF6] text-white w-[123px] rounded-[7.95px] mt-8 lg:mt-12 shadow-lg shadow-gray-400">
-                                Learn More
-                            </button>
-                        </div>
-                    </div>
+            <img
+
+              src="/images/Home/Section2/aboutUsHome.png"
+
+              alt="team"
+
+              className="w-full h-[300px] sm:h-[420px] lg:h-full object-cover rounded-[12px]"
+
+            />
+
+          </div>
+
+          {/* Right Content */}
+
+          <div className="w-full lg:w-1/2 p-4 sm:p-6 lg:p-10 flex flex-col justify-center">
+
+            <p className="text-[#191D28] text-[16px] sm:text-[18px] mb-4 flex items-center gap-2">
+
+              <img src="/images/Home/Section2/iconTitle.png" alt="" />
+
+              ABOUT US
+
+            </p>
+
+            {/* Functional Buttons */}
+
+            <div className="flex flex-wrap gap-2 bg-gray-100 rounded-3xl sm:rounded-full px-2 py-2 max-w-[503px] mb-6 border border-gray-400 text-[14px] sm:text-[16px] md:text-[20px]">
+
+              {Object.entries(aboutTabs).map(([key, tab]) => (
+
+                <button
+
+                  key={key}
+
+                  onClick={() => setActiveTab(key)}
+
+                  className={`flex-1 min-w-[120px] px-4 py-2 rounded-full transition-all duration-300 ${
+
+                    activeTab === key
+
+                      ? "bg-[#388EF6] text-white"
+
+                      : "text-[#191D28] hover:bg-[#388EF6] hover:text-white"
+
+                  }`}
+
+                >
+
+                  {tab.label}
+
+                </button>
+
+              ))}
+
+            </div>
+
+            {/* Dynamic Text */}
+
+            <p className="text-gray-700 text-[15px] sm:text-[17px] lg:text-[18px] mb-6 leading-relaxed">
+
+              {currentTab.description}
+
+            </p>
+
+            {/* Dynamic Points */}
+
+            <div className="space-y-3">
+
+              {currentTab.points.map((text, index) => (
+
+                <div
+
+                  key={index}
+
+                  className="flex items-start gap-3 text-[15px] sm:text-[18px] lg:text-[20px] text-gray-800"
+
+                >
+
+                  <span className="w-5 h-5 mt-1 flex-shrink-0 flex items-center justify-center bg-blue-500 text-white rounded-full text-sm">
+
+                    ✓
+
+                  </span>
+
+                  <span>{text}</span>
+
                 </div>
-            </section>
+
+              ))}
+
+            </div>
+
+            <button className="p-3 bg-[#388EF6] text-white w-[123px] rounded-[7.95px] mt-8 lg:mt-12 shadow-lg shadow-gray-400">
+
+              Learn More
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
 
             {/* Our Core Service */}
             <section className="flex flex-col items-center mt-16 px-4">

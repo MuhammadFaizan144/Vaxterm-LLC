@@ -82,3 +82,66 @@ export const faqData = [
     { question: "Can your services scale as my business grows?", answer: "Absolutely. Our packages are designed to grow alongside your transaction volume." },
     { question: "How often will I receive financial reports?", answer: "Standard reporting is monthly, but we offer weekly or real-time dashboards as well." }
 ];
+export const aboutTabs = {
+
+  mission: {
+
+    label: "Our Mission",
+
+    description:
+
+      "Vaxterm LLC is committed to delivering reliable, scalable, and compliant IT solutions that help enterprise and government clients improve operations, reduce complexity, and achieve long-term technology success.",
+
+    points: [
+
+      "Trusted Government Vendor",
+
+      "Enterprise-Grade Technology",
+
+      "Global Procurement Network",
+
+    ],
+
+  },
+
+  vision: {
+
+    label: "Our Vision",
+
+    description:
+
+      "Our vision is to become a trusted global technology partner recognized for innovation, compliance, and dependable digital transformation solutions across public and private sectors.",
+
+    points: [
+
+      "Future-Ready IT Solutions",
+
+      "Innovation Driven Approach",
+
+      "Long-Term Client Success",
+
+    ],
+
+  },
+
+  story: {
+
+    label: "Our Story",
+
+    description:
+
+      "Vaxterm LLC is an Evanston, Illinois-based technology firm built to simplify complex technology procurement and implementation. We support organizations with strategic sourcing, enterprise hardware deployment, and cloud-based software solutions.",
+
+    points: [
+
+      "Illinois-Based Technology Firm",
+
+      "Enterprise & Government Focus",
+
+      "Built on Trust and Reliability",
+
+    ],
+
+  },
+
+};
