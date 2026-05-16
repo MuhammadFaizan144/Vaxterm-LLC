@@ -49,7 +49,7 @@ const Navbar = () => {
         {/* CTA Button (Desktop) */}
         <Link
           to="/get-free-quote"
-          className="hidden lg:block bg-[#0D7FFB] text-white rounded-[8px] text-[16px] xl:py-3 py-2 xl:px-5 px-3"
+          className="hidden shadow-lg shadow-gray-400 lg:block bg-[#0D7FFB] text-white rounded-[8px] text-[16px] xl:py-3 py-2 xl:px-5 px-3"
         >
           Get Free Quote
         </Link>

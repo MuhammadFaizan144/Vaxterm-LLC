@@ -59,9 +59,9 @@ const AppContent = () => {
 
 const App = () => {
   return (
-    <BrowserRouter>
+    
       <AppContent />
-    </BrowserRouter>
+    
   )
 }
 
