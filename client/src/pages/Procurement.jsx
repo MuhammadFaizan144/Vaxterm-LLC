@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
-import { Plus, Minus } from "lucide-react";
-
+import { Plus, Minus, Import } from "lucide-react";
+import { Link } from "react-router-dom"; 
 const listStrategic = [
   {
     image: "/images/Procurement/section2/tickPro.png",
@@ -133,7 +133,7 @@ const supportItems = [
     image: "/images/Procurement/section3/OoP03.png",
     title: "Industrial Machinery Procurement",
     description:
-      "Vaxterm LLC provides sourcing services for industrial machinery and heavy-duty equipment required for operational facilities. Our procurement capabilities include forklifts, lifting systems, and material handling equipment used across industrial and logistics environments.",
+      "Vaxterm LLC provides sourcing services for industrial machinery and heavy duty equipment required for operational facilities. Our procurement capabilities include forklifts, lifting systems, and material handling equipment used across industrial and logistics environments.",
     points: [
       "Forklifts and Material Handling Equipment",
       "Heavy Industrial Machinery",
@@ -145,7 +145,7 @@ const supportItems = [
     image: "/images/Procurement/section3/OoP04.png",
     title: "General Supplies & Facility Equipment",
     description:
-      "Vaxterm LLC supports organizations by sourcing general operational supplies required for daily business and facility management. Our team handles bulk procurement of office materials, furniture, and commercial-grade appliances to ensure consistent availability of essential resources.",
+      "Vaxterm LLC supports organizations by sourcing general operational supplies required for daily business and facility management. Our team handles bulk procurement of office materials, furniture, and commercial grade appliances to ensure consistent availability of essential resources.",
     points: ["Office Furniture & Equipment", "Logistics & Inventory Coordination"],
     reverse: true,
   },
@@ -239,8 +239,8 @@ const Procurement = () => {
             <p className="text-[15px] sm:text-[16px] leading-relaxed text-[#414243] mt-5 sm:mt-6 max-w-[560px]">
               Vaxterm LLC provides end-to-end procurement and logistics services
               that simplify sourcing processes and ensure reliable delivery of
-              mission-critical equipment. Our global supplier network and
-              logistics expertise enable organizations to access high-quality
+              mission critical equipment. Our global supplier network and
+              logistics expertise enable organizations to access high quality
               products with efficiency, compliance, and precision.
             </p>
 
@@ -259,10 +259,11 @@ const Procurement = () => {
                 </li>
               ))}
             </ul>
-
+            <Link to='/capabilities'>
             <button className="bg-[#0D7FFB] text-[15px] sm:text-[16px] py-3 px-7 rounded-lg shadow-gray-400 shadow-xl text-white mt-6 hover:bg-[#005fd1] transition-all duration-300 w-full sm:w-auto">
               View Our Capabilities
             </button>
+            </Link>
           </div>
 
           <div className="w-full">

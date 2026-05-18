@@ -1,11 +1,11 @@
 export const globalOperation=[
     {
         icon:"/images/Hardware/ticks.png",
-        details:"High-Performance Infrastructure"
+        details:"High Performance Infrastructure"
     },
     {
         icon:"/images/Hardware/ticks.png",
-        details:"Industrial-Grade Reliability",
+        details:"Industrial Grade Reliability",
         side:true
     },
     {
@@ -22,13 +22,13 @@ export const enterprisecomputing=[
     {
         image:"/images/Hardware/section03/ec01.png",
         title:"Server Infrastructure",
-        description:"High-availability rack and tower servers designed for enterprise environments, data centers.",
+        description:"High availability rack and tower servers designed for enterprise environments, data centers.",
         ProductButton:"/hardware"
     },
     {
         image:"/images/Hardware/section03/ec02.png",
         title:"Workstations & Laptops",
-        description:"Professional-grade computing devices engineered for high-performance workloads, including engineering, analytics.",
+        description:"Professional grade computing devices engineered for high performance workloads, including engineering, analytics.",
         ProductButton:"/hardware/WorkstationsLaptops"
     },
     {
@@ -47,12 +47,12 @@ export const IndustrialPower=[
     {
         image:"/images/Hardware/section04/ip02.png",
         title:"Enterprise UPS Systems",
-        description:"Online double-conversion UPS solutions that protect sensitive IT systems from outages, voltage fluctuations."
+        description:"Online double conversion UPS solutions that protect sensitive IT systems from outages, voltage fluctuations."
     },
     {
         image:"/images/Hardware/section04/ip03.png",
         title:"Electrical Distribution Systems",
-        description:"High-quality electrical panels, switchgear, and circuit protection systems engineered for safe and efficient energy management."
+        description:"High quality electrical panels, switchgear, and circuit protection systems engineered for safe and efficient energy management."
     }
 ]
 export const networking=[
@@ -64,12 +64,12 @@ export const networking=[
     {
         image:"/images/Hardware/section05/n02.png",
         title:"Fiber Optics & Cabling",
-        description:"Professional-grade fiber optics and structured cabling systems for high bandwidth, long-distance data transmission."
+        description:"Professional grade fiber optics and structured cabling systems for high bandwidth, long distance data transmission."
     },
     {
         image:"/images/Hardware/section05/n03.png",
         title:"Wireless Infrastructure",
-        description:"Industrial-grade access points and wireless controllers for seamless and reliable connectivity across large facilities."
+        description:"Industrial grade access points and wireless controllers for seamless and reliable connectivity across large facilities."
     }
 ]
 
@@ -81,8 +81,8 @@ export const facility=[
     },
     {
         image:"/images/Hardware/section06/f02.png",
-        title:"Commercial-Grade Appliances",
-        description:"Durable and high-performance electrical appliances designed for government offices, healthcare facilities."
+        title:"Commercial Grade Appliances",
+        description:"Durable and high performance electrical appliances designed for government offices, healthcare facilities."
     },
     {
         image:"/images/Hardware/section06/f03.png",

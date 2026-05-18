@@ -117,6 +117,9 @@ const About = () => {
 
       {/* Quality Cards */}
       <section className="px-4">
+        <div className="text-center w-full font-bold py-10">
+          <h2 className="text-[clamp(30px,6vw,48px)]">About us page:</h2>
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-10 max-w-[1218px] mx-auto">
           {quality.map((item, index) => (
             <div
@@ -137,7 +140,7 @@ const About = () => {
 
       {/* Stats */}
       <section className="mt-16 mb-16 lg:mb-20 px-4">
-        <div className="grid grid-cols-1 min-[420px]:grid-cols-2 lg:grid-cols-4 mx-auto max-w-[1171px]  rounded-2xl overflow-hidden">
+        <div className="grid grid-cols-1 min-[420px]:grid-cols-2 lg:grid-cols-3 mx-auto max-w-[1171px]  rounded-2xl overflow-hidden">
           {staticData.map((item, index) => (
             <div
               className={`flex flex-col justify-center items-center py-8 lg:py-12 border-[#3F91F6]/40 ${
@@ -178,8 +181,8 @@ const About = () => {
               <div className="max-w-md">
                 <p className="text-[#011505] text-[15px] sm:text-[16px] leading-[24px]">
                   At the core of our operations, Vaxterm LLC is a
-                  technology-driven organization focused on delivering
-                  high-performance IT ecosystems
+                  technology driven organization focused on delivering
+                  high performance IT ecosystems
                 </p>
               </div>
 
@@ -216,12 +219,12 @@ const About = () => {
                   <div className="relative w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center">
                     <img src="/images/AboutUs/section5/80.png" alt="" />
                     <span className="absolute text-xl sm:text-2xl font-bold text-white">
-                      80%
+                      96%
                     </span>
                   </div>
 
                   <p className="text-white text-[14px] sm:text-[16px] font-medium leading-tight">
-                    Reliable IT. Real-Time Results.
+                    Reliable IT. Real Time Results.
                   </p>
                 </div>
               </div>
@@ -253,7 +256,7 @@ const About = () => {
 
           <div className="flex-1 w-full">
             <h2 className="text-white text-[clamp(28px,5vw,42px)] leading-tight font-semibold mb-8 lg:mb-12 max-w-[620px] max-lg:text-center">
-              Leadership & Expertise — A Foundation of Excellence
+              Leadership & Expertise <br />A Foundation of Excellence
             </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-8 lg:gap-10">
@@ -281,7 +284,7 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 max-w-[1248px] mx-auto lg:gap-28 gap-10 items-center">
           <div>
             <h2 className="max-w-[502px] text-[clamp(30px,6vw,48px)] leading-tight font-bold">
-              Strategic Sourcing — Beyond the Digital Frontier
+              Strategic Sourcing <br />Beyond the Digital Frontier
             </h2>
 
             <p className="max-w-[460px] text-[15px] sm:text-[16px] text-[#011505] font-dm mt-4 leading-relaxed">

@@ -32,7 +32,7 @@ export const capalitiesoverview=[
     {
         image:'/images/Capabilities/section2/ci07.png',
         name:'UEI',
-        detail:''
+        detail:'LD1URVCL84H1'
     }, 
     
     {
@@ -46,7 +46,7 @@ export const rightcapalitiesoverview=[
         color:"#DBEAFE",
         image:"/images/Capabilities/section2/rci01.png",
         title:"IT Infrastructure",
-        description:"Enterprise-grade hardware solutions and infrastructure deployment for mission-critical government operations."
+        description:"Enterprise grade hardware solutions and infrastructure deployment for mission-critical government operations."
     },
     {
         color:"#E0E7FF",
@@ -64,7 +64,7 @@ export const rightcapalitiesoverview=[
         color:"#DB478B2B",
         image:"/images/Capabilities/section2/rci04.png",
         title:"Strategic Sourcing",
-        description:"Multi-sector procurement and supply chain management."
+        description:"Multi sector procurement and supply chain management."
     }
 ]
 export const services = [

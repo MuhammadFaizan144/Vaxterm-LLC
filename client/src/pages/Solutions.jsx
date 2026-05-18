@@ -77,21 +77,37 @@ const Solutions = () => {
         </h2>
 
         {/* Tabs */}
-        <div className="w-full max-w-[1100px] rounded-[28px] sm:rounded-[58px] mt-8 sm:mt-14 flex justify-center px-3 py-3 gap-3 shadow-lg flex-wrap">
-          {services.map((service) => (
-            <button
-              key={service.id}
-              onClick={() => setActiveTab(service)}
-              className={`${
+        <div className=" mx-auto rounded-[22px] sm:rounded-[36px] mt-6 sm:mt-10 flex justify-center items-center px-2 sm:px-3 py-2 sm:py-3 gap-2 sm:gap-3 shadow-md flex-wrap">
+    {services.map((service) => (
+        <button
+            key={service.id}
+            onClick={() => setActiveTab(service)}
+            className={`${
                 activeTab.id === service.id
-                  ? "bg-[#3D8EF4] text-white"
-                  : "bg-white text-black"
-              } text-[15px] sm:text-[18px] lg:text-[24px] font-semibold font-dm rounded-full px-4 sm:px-6 lg:px-7 py-3 sm:py-4 lg:py-5 transition`}
-            >
-              {service.Title}
-            </button>
-          ))}
-        </div>
+                    ? "bg-[#3D8EF4] text-white"
+                    : "bg-white text-black"
+            } 
+            text-[13px] 
+            xs:text-[15px] 
+            sm:text-[16px] 
+            md:text-[18px] 
+            lg:text-[20px] 
+            font-semibold 
+            font-dm 
+            rounded-full 
+            px-4
+            sm:px-5 
+            md:px-6 
+            py-3
+            sm:py-3.5 
+            md:py-4 
+            transition
+            whitespace-nowrap`}
+        >
+            {service.Title}
+        </button>
+    ))}
+</div>
 
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center max-w-[1340px] w-full mt-12 lg:mt-20">
           <div className="w-full">

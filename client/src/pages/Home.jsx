@@ -131,9 +131,9 @@ const Home = () => {
 
                                         className={`flex-1 min-w-[120px] px-4 py-2 rounded-full transition-all duration-300 ${activeTab === key
 
-                                                ? "bg-[#388EF6] text-white"
+                                            ? "bg-[#388EF6] text-white"
 
-                                                : "text-[#191D28] hover:bg-[#388EF6] hover:text-white"
+                                            : "text-[#191D28] hover:bg-[#388EF6] hover:text-white"
 
                                             }`}
 
@@ -222,7 +222,7 @@ const Home = () => {
                             <div
                                 className={`w-full max-w-[356px] mx-auto min-h-[295px] py-5 px-6 rounded-[21.29px] shadow-lg bg-white ${index === 1 ? "lg:mt-20" : ""
                                     }`}
-                                
+
                             >
                                 <div className="bg-gradient-to-b from-[#1F90D7] to-[#1F90D7]/0 rounded-lg w-[75px] h-[68px] flex items-center justify-center mb-4">
                                     <img src={item.image} alt="service" />
@@ -352,7 +352,7 @@ const Home = () => {
 
                     <div className="flex-1 w-full">
                         <h2 className="text-white text-[clamp(28px,5vw,42px)] font-semibold mb-8 lg:mb-12 max-w-[620px] max-lg:text-center">
-                            Leadership & Expertise A Foundation of Excellence
+                            Leadership & Expertise <br />A Foundation of Excellence
                         </h2>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-8 lg:gap-10">
@@ -382,16 +382,16 @@ const Home = () => {
                 </h3>
 
                 <div className="max-w-7xl mx-auto px-4 sm:px-5 py-5 sm:py-8 lg:py-10">
-    <div
-        ref={scrollRef}
-        onScroll={handleScroll}
-        className="flex gap-4 sm:gap-5 md:gap-6 overflow-x-auto snap-x snap-mandatory pb-6 sm:pb-8"
-        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-    >
-        {testimonials.map((item) => (
-            <div
-                key={item.id}
-                className="
+                    <div
+                        ref={scrollRef}
+                        onScroll={handleScroll}
+                        className="flex gap-4 sm:gap-5 md:gap-6 overflow-x-auto snap-x snap-mandatory pb-6 sm:pb-8"
+                        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+                    >
+                        {testimonials.map((item) => (
+                            <div
+                                key={item.id}
+                                className="
                     min-w-[90%]
                     sm:min-w-[68%]
                     md:min-w-[48%]
@@ -405,33 +405,33 @@ const Home = () => {
                     flex
                     flex-col
                 "
-            >
-                <div className="flex justify-between items-start mb-6 sm:mb-7">
-                    <img
-                        src={item.image}
-                        alt=""
-                        className="
+                            >
+                                <div className="flex justify-between items-start mb-6 sm:mb-7">
+                                    <img
+                                        src={item.image}
+                                        alt=""
+                                        className="
                             w-[70px] h-[70px]
                             sm:w-[90px] sm:h-[90px]
                             md:w-[105px] md:h-[105px]
                             rounded-full
                             object-cover
                         "
-                    />
+                                    />
 
-                    <img
-                        src="/images/Home/Section7/quote_Icon.png"
-                        alt=""
-                        className="
+                                    <img
+                                        src="/images/Home/Section7/quote_Icon.png"
+                                        alt=""
+                                        className="
                             w-[30px] h-[25px]
                             sm:w-[36px] sm:h-[30px]
                             md:w-[40px] md:h-[33px]
                         "
-                    />
-                </div>
+                                    />
+                                </div>
 
-                <p
-                    className="
+                                <p
+                                    className="
                         text-[#0B1422]
                         text-[14px]
                         sm:text-[16px]
@@ -443,39 +443,38 @@ const Home = () => {
                         md:leading-[30px]
                         mb-8 sm:mb-10
                     "
-                >
-                    "{item.text}"
-                </p>
+                                >
+                                    "{item.text}"
+                                </p>
 
-                <div className="mt-auto">
-                    <h4 className="text-[14px] sm:text-[15px] md:text-[16px] font-bold leading-[24px] text-[#0B1422] mb-2">
-                        {item.name}
-                    </h4>
+                                <div className="mt-auto">
+                                    <h4 className="text-[14px] sm:text-[15px] md:text-[16px] font-bold leading-[24px] text-[#0B1422] mb-2">
+                                        {item.name}
+                                    </h4>
 
-                    <div className="flex gap-1 text-orange-400 text-[15px] sm:text-[17px]">
-                        {[...Array(5)].map((_, i) => (
-                            <span key={i}>★</span>
+                                    <div className="flex gap-1 text-orange-400 text-[15px] sm:text-[17px]">
+                                        {[...Array(5)].map((_, i) => (
+                                            <span key={i}>★</span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="flex justify-center items-center gap-2.5 mt-5 sm:mt-6 flex-wrap">
+                        {testimonials.map((_, i) => (
+                            <button
+                                key={i}
+                                onClick={() => scrollTo(i)}
+                                className={`transition-all duration-300 rounded-full border-2 ${activeDot === i
+                                        ? "w-4 h-4 bg-[#3B82F6] border-[#3B82F6]"
+                                        : "w-3 h-3 bg-white border-gray-300"
+                                    }`}
+                            />
                         ))}
                     </div>
                 </div>
-            </div>
-        ))}
-    </div>
-
-    <div className="flex justify-center items-center gap-2.5 mt-5 sm:mt-6 flex-wrap">
-        {testimonials.map((_, i) => (
-            <button
-                key={i}
-                onClick={() => scrollTo(i)}
-                className={`transition-all duration-300 rounded-full border-2 ${
-                    activeDot === i
-                        ? "w-4 h-4 bg-[#3B82F6] border-[#3B82F6]"
-                        : "w-3 h-3 bg-white border-gray-300"
-                }`}
-            />
-        ))}
-    </div>
-</div>
             </section>
 
             {/* FAQ */}

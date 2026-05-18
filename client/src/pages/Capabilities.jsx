@@ -84,7 +84,7 @@ const Capabilities = () => {
           {/* Left */}
           <div className="max-w-[584px] w-full flex flex-col">
             <p className="mb-6 sm:mb-8 text-[#334155] text-[15px] sm:text-[18px] leading-relaxed">
-              Vaxterm LLC is a U.S.-based strategic solutions provider
+              Vaxterm LLC is a U.S. based strategic solutions provider
               specializing in IT infrastructure, enterprise software, and global
               procurement services.
             </p>
@@ -247,7 +247,7 @@ const Capabilities = () => {
           </h5>
 
           <p className="text-[#DBEAFE] text-[15px] md:text-[20px] leading-7 max-w-[768px] text-center mb-8">
-            Let's discuss how we can support your mission-critical operations
+            Let's discuss how we can support your mission critical operations
             with compliant, reliable technology solutions.
           </p>
 
@@ -263,7 +263,7 @@ const Capabilities = () => {
               />
               <span>Download Full Capability Statement</span>
             </Link>
-
+            <Link to="/contact">
             <button className="flex items-center justify-center gap-3 text-[15px] sm:text-[18px] text-center w-full md:w-auto px-5 sm:px-14 min-h-[60px] sm:min-h-[64px] bg-[#3D8EF4] text-white rounded-xl">
               <img
                 src="/images/Capabilities/section5/call.png"
@@ -272,6 +272,7 @@ const Capabilities = () => {
               />
               <span>Schedule a Consultation</span>
             </button>
+            </Link>            
           </div>
         </div>
       </section>

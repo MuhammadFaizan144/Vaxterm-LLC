@@ -1,7 +1,7 @@
 export const quality = [
   {
     image: "/images/AboutUs/section3.png",
-    desciption: "Illinois-Based Strategic Technology Provider",
+    desciption: "Illinois Based Strategic Technology Provider",
   },
   {
     image: "/images/AboutUs/section3.png",
@@ -9,7 +9,7 @@ export const quality = [
   },
   {
     image: "/images/AboutUs/section3.png",
-    desciption: "Mission-Critical Infrastructure Delivery",
+    desciption: "Mission Critical Infrastructure Delivery",
   },
   {
     image: "/images/AboutUs/section3.png",
@@ -18,10 +18,10 @@ export const quality = [
 ];
 
 export const staticData = [
-  { number: "8K", desciption: "Project Completed" },
-  { number: "260K", desciption: "Skilled Experts" },
-  { number: "60K", desciption: "Media Activities" },
-  { number: "19K", desciption: "Skilled Experts" },
+  { number: "200", desciption: "Project Completed" },
+  { number: "80+", desciption: "Skilled Experts" },
+  { number: "40+", desciption: "Media Activities" },
+  
 ];
 
 export const icons = [
@@ -39,7 +39,7 @@ export const icons = [
   },
   {
     icon: "/images/AboutUs/section5/sassdevelopment.png",
-    desciption: "Cloud-Based ERP & CRM Systems",
+    desciption: "Cloud Based ERP & CRM Systems",
   },
 ];
 

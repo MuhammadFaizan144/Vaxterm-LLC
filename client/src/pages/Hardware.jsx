@@ -117,7 +117,7 @@ const Hardware = () => {
           </h1>
 
           <p className="text-[15px] sm:text-[18px] lg:text-[20px] leading-[26px] sm:leading-[30px] font-dm text-white mt-5 sm:mt-6 mx-auto max-w-[850px]">
-            Delivering High-Performance IT Hardware, Industrial Power Systems,
+            Delivering High Performance IT Hardware, Industrial Power Systems,
             and Reliable Infrastructure for Mission-Critical Operations.
           </p>
         </div>

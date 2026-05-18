@@ -90,23 +90,23 @@ export const services = [
     {
         id: 1,
         Title: "Enterprise Systems",
-        description: "Vaxterm LLC designs and deploys enterprise-level systems that help organizations centralize operations and improve collaboration. Our customized CRM and ERP platforms enable efficient management of customer relationships, internal resources, and project lifecycles.",
+        description: "Vaxterm LLC designs and deploys enterprise level systems that help organizations centralize operations and improve collaboration. Our customized CRM and ERP platforms enable efficient management of customer relationships, internal resources, and project lifecycles.",
         image: "/images/Solutions/section2/EnterpriseSystem.png",
         list: [
             "Custom CRM Development",
             "ERP System Integration",
             "Project Management Dashboards",
-            "Real-Time Analytics & Reporting",
+            "Real Time Analytics & Reporting",
             "Workflow Automation Tools"
         ]
     },
     {
         id: 2,
         Title: "Financial Tech",
-        description: "Vaxterm LLC delivers advanced financial technology solutions designed to modernize accounting operations, improve financial accuracy, and enhance organizational efficiency. Our cloud-based financial platforms provide secure access to bookkeeping, invoicing, auditing,",
+        description: "Vaxterm LLC delivers advanced financial technology solutions designed to modernize accounting operations, improve financial accuracy, and enhance organizational efficiency. Our cloud based financial platforms provide secure access to bookkeeping, invoicing, auditing,",
         image: "/images/Solutions/section2/FinancialTech.png",
         list: [
-            "Real-Time Financial Reporting",
+            "Real Time Financial Reporting",
             "Secure Data Management",
             "Expense & Budget Management",
             "Financial Auditing Tools",
