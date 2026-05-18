@@ -17,11 +17,11 @@ const socialLinks = [
 ]
 
 const usefulLinks = [
-    "Home",
-    "About us",
-    "Our Service",
-    "Terms of Service",
-    "News & Media",
+    {title:"Home",link:"/"},
+    {title:"About us",link:"/about"},
+    {title:"Our Service",link:"/procurement"},
+    {title:"Terms of Service",link:"/termSevices"},
+   { title:"News & Media",link:""}
 ]
 const contactData = [
     {
@@ -90,11 +90,11 @@ const Footer = () => {
                                 {usefulLinks.map((item, i) => (
                                     <li key={i}>
                                         <a
-                                            href="#"
+                                            href={item.link}
                                             className="hover:text-white hover:pl-1 transition flex items-center gap-2"
                                         >
                                             <span className="text-white">›</span>
-                                            {item}
+                                            {item.title}
                                         </a>
                                     </li>
                                 ))}
@@ -156,9 +156,8 @@ const Footer = () => {
                         <p>© 2026 Vaxterm LLC. All Rights Reserved.</p>
 
                         <div className="flex gap-6">
-                            <a href="#" className="hover:text-red-500">Terms & Conditions</a>
-                            <a href="#" className="hover:text-red-500">Careers</a>
-                            <a href="#" className="hover:text-red-500">Privacy Policy</a>
+                            <a href="/careers" className="hover:text-blue-500">Careers</a>
+                            <a href="/privacy-policy" className="hover:text-blue-500">Privacy Policy</a>
                         </div>
                     </div>
 

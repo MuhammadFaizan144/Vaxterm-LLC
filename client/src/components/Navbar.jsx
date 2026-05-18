@@ -22,11 +22,11 @@ const Navbar = () => {
   return (
     <header className="flex justify-center">
       
-      <nav className="mt-6 absolute w-[90%] lg:w-[95%] flex items-center  justify-between lg:py-3 py-2 lg:px-16 sm:px-10 px-5 lg:rounded-[100px] rounded-3xl bg-white z-50">
+      <nav className="mt-6 absolute w-[90%] lg:w-[95%] flex items-center  justify-between lg:py-3 py-2 lg:px-16 sm:px-10 px-5 lg:rounded-[100px] rounded-3xl bg-[#f5f7f9] z-50">
 
         {/* Logo */}
         <img
-          src="/images/logo.png"
+          src="/images/whitelogo.png"
           alt="logo"
           className="max-w-[172px] xl:h-[64px] h-[50px]"
         />

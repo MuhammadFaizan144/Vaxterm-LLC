@@ -40,14 +40,17 @@ export const industries = [
 ]
 export const services = [
     {
+        link:"/about",
         image: "/images/Home/Section3/back-in-time.png",
         title: "Enterprise Hardware",
         description: "High-performance IT infrastructure including enterprise servers"
     }, {
+        link:"/solutions",
         image: "/images/Home/Section3/back-in-time.png",
         title: "Advanced Software Solutions",
         description: "Scalable SaaS platforms including CRM, ERP"
     }, {
+        link:"/procurement",
         image: "/images/Home/Section3/back-in-time.png",
         title: "Strategic Procurement",
         description: "Global sourcing of specialized equipment, mission-critical assets, and logistics management"
@@ -60,16 +63,60 @@ export const features = [
     { label: "Strategic Contract\nManagement" },
 ];
 export const testimonials = [
-    { id: 1, name: "ENGINEER. LONDON", text: "Our IT consulting services are customized to empower businesses in enhancing their technology strategies and achieved.", image: "/images/Home/Section7/scroll01.png" },
-    { id: 2, name: "ENGINEER. SWITZERLAND", text: "Our IT consulting services are tailored to help businesses optimize their technology strategies and streamline for greater efficiency.", image: "/images/Home/Section7/scroll02.png" },
-    { id: 3, name: "FOUNDER. LONDON", text: "Our IT consulting services are designed to empower businesses in enhancing their technology strategies.", image: "/images/Home/Section7/scroll03.png" },
-    { id: 4, name: "ENGINEER. LONDON", text: "Our IT consulting services are customized to empower businesses in enhancing their technology strategies and achieved.", image: "/images/Home/Section7/scroll01.png" },
-    { id: 5, name: "ENGINEER. SWITZERLAND", text: "Our IT consulting services are tailored to help businesses optimize their technology strategies and streamline for greater efficiency.", image: "/images/Home/Section7/scroll02.png" },
-    { id: 6, name: "FOUNDER. LONDON", text: "Our IT consulting services are designed to empower businesses in enhancing their technology strategies.", image: "/images/Home/Section7/scroll03.png" },
-    { id: 7, name: "ENGINEER. LONDON", text: "Our IT consulting services are customized to empower businesses in enhancing their technology strategies and achieved.", image: "/images/Home/Section7/scroll01.png" },
-    { id: 8, name: "ENGINEER. SWITZERLAND", text: "Our IT consulting services are tailored to help businesses optimize their technology strategies and streamline for greater efficiency.", image: "/images/Home/Section7/scroll02.png" },
-    { id: 9, name: "FOUNDER. LONDON", text: "Our IT consulting services are designed to empower businesses in enhancing their technology strategies.", image: "/images/Home/Section7/scroll03.png" }
-
+    {
+        id: 1,
+        name: "ENGINEER. LONDON",
+        text: "Their team helped us improve our digital workflow and made our business operations much smoother.",
+        image: "/images/Home/Section7/scroll01.png"
+    },
+    {
+        id: 2,
+        name: "ENGINEER. SWITZERLAND",
+        text: "The service was professional, reliable, and focused on solving our real technology challenges.",
+        image: "/images/Home/Section7/scroll02.png"
+    },
+    {
+        id: 3,
+        name: "FOUNDER. LONDON",
+        text: "They understood our goals clearly and delivered a solution that matched our business needs.",
+        image: "/images/Home/Section7/scroll03.png"
+    },
+    {
+        id: 4,
+        name: "ENGINEER. LONDON",
+        text: "Working with them helped us save time, reduce technical issues, and improve overall productivity.",
+        image: "/images/Home/Section7/scroll4.avif"
+    },
+    {
+        id: 5,
+        name: "ENGINEER. PAKISTAN",
+        text: "Their IT guidance gave our company a better structure and helped us make smarter technology decisions.",
+        image: "/images/Home/Section7/scroll5.jpg"
+    },
+    {
+        id: 6,
+        name: "FOUNDER. PAKISTAN",
+        text: "The final result was clean, efficient, and easy for our team to manage without confusion.",
+        image: "/images/Home/Section7/scroll6.jpg"
+    },
+    {
+        id: 7,
+        name: "ENGINEER. PAKISTAN",
+        text: "They provided clear communication, strong technical support, and delivered everything on time.",
+        image: "/images/Home/Section7/scroll7.jpeg"
+    },
+    {
+        id: 8,
+        name: "ENGINEER. NIGERIA",
+        text: "Their solutions helped us modernize our systems and improve the way our team works every day.",
+        image: "/images/Home/Section7/scroll8.avif"
+    },
+    {
+        id: 9,
+        name: "FOUNDER. LONDON",
+        text: "A great experience from start to finish. The service was smooth, practical, and business-focused.",
+        image: "/images/Home/Section7/scroll9.webp"
+    }
 ];
 export const faqData = [
     {
@@ -90,13 +137,13 @@ export const aboutTabs = {
 
     description:
 
-      "Vaxterm LLC is committed to delivering reliable, scalable, and compliant IT solutions that help enterprise and government clients improve operations, reduce complexity, and achieve long-term technology success.",
+      "Vaxterm LLC is committed to delivering reliable, scalable, and compliant IT solutions that help enterprise and government clients improve operations, reduce complexity, and achieve long term technology success.",
 
     points: [
 
       "Trusted Government Vendor",
 
-      "Enterprise-Grade Technology",
+      "Enterprise Grade Technology",
 
       "Global Procurement Network",
 
@@ -114,11 +161,11 @@ export const aboutTabs = {
 
     points: [
 
-      "Future-Ready IT Solutions",
+      "Future Ready IT Solutions",
 
       "Innovation Driven Approach",
 
-      "Long-Term Client Success",
+      "Long Term Client Success",
 
     ],
 
@@ -130,11 +177,11 @@ export const aboutTabs = {
 
     description:
 
-      "Vaxterm LLC is an Evanston, Illinois-based technology firm built to simplify complex technology procurement and implementation. We support organizations with strategic sourcing, enterprise hardware deployment, and cloud-based software solutions.",
+      "Vaxterm LLC is an Evanston, Illinois based technology firm built to simplify complex technology procurement and implementation. We support organizations with strategic sourcing, enterprise hardware deployment, and cloud based software solutions.",
 
     points: [
 
-      "Illinois-Based Technology Firm",
+      "Illinois Based Technology Firm",
 
       "Enterprise & Government Focus",
 

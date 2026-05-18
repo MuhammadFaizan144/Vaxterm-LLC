@@ -16,6 +16,9 @@ import Capabilities_download from './pages/Capabilities_download'
 import HardwareWorkstationsLaptops from './pages/HardwareWorkstationsLaptops'
 import HardwareLaptopShop from './pages/HardwareLaptopShop'
 import GetFreeQuote from './pages/GetFreeQuote'
+import TermServices from './pages/TermServices'
+import Careers from './pages/Career'
+import PrivacyPolicy from './pages/privacySections'
 
 const AppContent = () => {
   const location = useLocation()
@@ -50,6 +53,9 @@ const AppContent = () => {
 
         <Route path='/contact' element={<Contact />} />
         <Route path="/get-free-quote" element={<GetFreeQuote/>} />
+        <Route path="/termSevices" element={<TermServices/>} />
+        <Route path="/careers" element={<Careers />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
 
        <Footer />
