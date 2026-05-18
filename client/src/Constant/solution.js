@@ -87,69 +87,74 @@ export const faqData = [
 ];
 // Enterprise Systems
 export const services = [
-    {
-        id: 1,
-        Title: "Enterprise Systems",
-        description: "Vaxterm LLC designs and deploys enterprise level systems that help organizations centralize operations and improve collaboration. Our customized CRM and ERP platforms enable efficient management of customer relationships, internal resources, and project lifecycles.",
-        image: "/images/Solutions/section2/EnterpriseSystem.png",
-        list: [
-            "Custom CRM Development",
-            "ERP System Integration",
-            "Project Management Dashboards",
-            "Real Time Analytics & Reporting",
-            "Workflow Automation Tools"
-        ]
-    },
-    {
-        id: 2,
-        Title: "Financial Tech",
-        description: "Vaxterm LLC delivers advanced financial technology solutions designed to modernize accounting operations, improve financial accuracy, and enhance organizational efficiency. Our cloud based financial platforms provide secure access to bookkeeping, invoicing, auditing,",
-        image: "/images/Solutions/section2/FinancialTech.png",
-        list: [
-            "Real Time Financial Reporting",
-            "Secure Data Management",
-            "Expense & Budget Management",
-            "Financial Auditing Tools",
-            "Automated Invoicing Systems"
-        ]
-    },
-    {
-        id: 3,
-        Title: "Lifecycle Management",
-        description: "Vaxterm LLC provides intelligent lifecycle management solutions that help organizations monitor, manage, and optimize critical assets throughout their operational lifespan. Our systems are designed to improve asset visibility, streamline workflows.",
-        image: "/images/Solutions/section2/LifecycleManagement.png",
-        list: [
-            "Asset Tracking Systems",
-            "Operational Workflow Management",
-            "Maintenance & Service Scheduling",
-            "Inventory & Resource Monitoring",
-            "Performance & Utilization Reporting"
-        ]
-    },
-    {
-        id: 4,
-        Title: "Cloud Hosting",
-        description: "Vaxterm LLC provides secure and scalable cloud hosting solutions designed to support the evolving infrastructure needs of modern organizations. Our cloud environments are built for reliability, flexibility, and high-performance operations.",
-        image: "/images/Solutions/section2/CloudHosting.png",
-        list: [
-            "Secure Cloud Infrastructure",
-            "Infrastructure Monitoring & Support",
-            "Data Backup & Recovery",
-            "High Availability & Reliability",
-            "Scalable Hosting Solutions"
-        ]
-    },
-    {
-        id: 5,
-        Title: "Software Solutions",
-        description: "Vaxterm LLC delivers innovative software solutions designed to improve operational efficiency, enhance productivity, and support digital transformation initiatives. Our customized platforms are built to meet the unique requirements of government agencies, enterprise organizations, and industrial operations.",
-        image: "/images/Solutions/section2/SoftwareSolutions.png",
-        list: [
-            "Custom Software Development",
-            "Enterprise Application Solutions",
-            "Workflow Automation",
-            "System Integration Services",
-            "Ongoing Maintenance & Support"
-        ]
-    }
-]
+  {
+    id: 1,
+    Title: "Enterprise Systems",
+    description:
+      "Vaxterm LLC designs and deploys enterprise level systems that help organizations centralize operations and improve collaboration. Our customized CRM and ERP platforms enable efficient management of customer relationships, internal resources, and project lifecycles.",
+    image: "/images/Solutions/section2/EnterpriseSystem.png",
+    list: [
+      "Custom CRM Development",
+      "ERP System Integration",
+      "Project Management Dashboards",
+      "Real Time Analytics & Reporting",
+      "Workflow Automation Tools",
+    ],
+  },
+  {
+    id: 2,
+    Title: "Financial Tech",
+    description:
+      "Vaxterm LLC delivers advanced financial technology solutions designed to modernize accounting operations, improve financial accuracy, and enhance organizational efficiency. Our cloud based financial platforms provide secure access to bookkeeping, invoicing, auditing, and financial reporting tools.",
+    image: "/images/Solutions/section2/FinancialTech.png",
+    list: [
+      "Real Time Financial Reporting",
+      "Secure Data Management",
+      "Expense & Budget Management",
+      "Financial Auditing Tools",
+      "Automated Invoicing Systems",
+    ],
+  },
+  {
+    id: 3,
+    Title: "Lifecycle Management",
+    description:
+      "Vaxterm LLC provides intelligent lifecycle management solutions that help organizations monitor, manage, and optimize critical assets throughout their operational lifespan. Our systems are designed to improve asset visibility, streamline workflows.",
+    image: "/images/Solutions/section2/LifecycleManagement.png",
+    list: [
+      "Asset Tracking Systems",
+      "Operational Workflow Management",
+      "Maintenance & Service Scheduling",
+      "Inventory & Resource Monitoring",
+      "Performance & Utilization Reporting",
+    ],
+  },
+  {
+    id: 4,
+    Title: "Cloud Hosting",
+    description:
+      "Vaxterm LLC provides secure and scalable cloud hosting solutions designed to support the evolving infrastructure needs of modern organizations. Our cloud environments are built for reliability, flexibility, and high-performance operations.",
+    image: "/images/Solutions/section2/CloudHosting.png",
+    list: [
+      "Secure Cloud Infrastructure",
+      "Infrastructure Monitoring & Support",
+      "Data Backup & Recovery",
+      "High Availability & Reliability",
+      "Scalable Hosting Solutions",
+    ],
+  },
+  {
+    id: 5,
+    Title: "Software Solutions",
+    description:
+      "Vaxterm LLC delivers innovative software solutions designed to improve operational efficiency, enhance productivity, and support digital transformation initiatives. Our customized platforms are built to meet the unique requirements of government agencies, enterprise organizations, and industrial operations.",
+    image: "/images/Solutions/section2/SoftwareSolutions.png",
+    list: [
+      "Custom Software Development",
+      "Enterprise Application Solutions",
+      "Workflow Automation",
+      "System Integration Services",
+      "Ongoing Maintenance & Support",
+    ],
+  },
+];

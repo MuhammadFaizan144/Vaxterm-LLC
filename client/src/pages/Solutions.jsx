@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef ,useEffect} from "react";
 import {
   digitaltransformation,
   whyChoose,
@@ -8,9 +8,31 @@ import {
   services,
 } from "../Constant/solution";
 import { Plus, Minus, Check } from "lucide-react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet,useSearchParams } from "react-router-dom";
 
 const Solutions = () => {
+const [searchParams] = useSearchParams();
+
+  
+
+  useEffect(() => {
+
+    const tab = searchParams.get("tab");
+
+    const selectedService = services.find(
+
+      (service) => service.Title.toLowerCase().replaceAll(" ", "-") === tab
+
+    );
+
+    if (selectedService) {
+
+      setActiveTab(selectedService);
+
+    }
+
+  }, [searchParams]);
+  //testinomial
   const [activeTab, setActiveTab] = useState(services[0]);
   const [openIndex, setOpenIndex] = useState(0);
   const scrollRef = useRef(null);
@@ -71,91 +93,160 @@ const Solutions = () => {
 
       {/* Digital Transformation */}
       <section className="flex flex-col justify-center items-center mt-16 lg:mt-24 px-4">
-        <h2 className="text-[30px] sm:text-[40px] lg:text-[48px] leading-tight text-[#011505] font-bold text-center">
-          Digital Transformation Through <br className="hidden lg:block" />
-          Advanced SaaS
-        </h2>
 
-        {/* Tabs */}
-        <div className=" mx-auto rounded-[22px] sm:rounded-[36px] mt-6 sm:mt-10 flex justify-center items-center px-2 sm:px-3 py-2 sm:py-3 gap-2 sm:gap-3 shadow-md flex-wrap">
-    {services.map((service) => (
-        <button
+      <h2 className="text-[30px] sm:text-[40px] lg:text-[48px] leading-tight text-[#011505] font-bold text-center">
+
+        Digital Transformation Through <br className="hidden lg:block" />
+
+        Advanced SaaS
+
+      </h2>
+
+      {/* Tabs */}
+
+      <div className="mx-auto rounded-[22px] sm:rounded-[36px] mt-6 sm:mt-10 flex justify-center items-center px-2 sm:px-3 py-2 sm:py-3 gap-2 sm:gap-3 shadow-md flex-wrap">
+
+        {services.map((service) => (
+
+          <button
+
             key={service.id}
+
             onClick={() => setActiveTab(service)}
+
             className={`${
-                activeTab.id === service.id
-                    ? "bg-[#3D8EF4] text-white"
-                    : "bg-white text-black"
+
+              activeTab.id === service.id
+
+                ? "bg-[#3D8EF4] text-white"
+
+                : "bg-white text-black"
+
             } 
+
             text-[13px] 
+
             xs:text-[15px] 
+
             sm:text-[16px] 
+
             md:text-[18px] 
+
             lg:text-[20px] 
+
             font-semibold 
+
             font-dm 
+
             rounded-full 
+
             px-4
+
             sm:px-5 
+
             md:px-6 
+
             py-3
+
             sm:py-3.5 
+
             md:py-4 
+
             transition
+
             whitespace-nowrap`}
-        >
+
+          >
+
             {service.Title}
-        </button>
-    ))}
-</div>
 
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center max-w-[1340px] w-full mt-12 lg:mt-20">
-          <div className="w-full">
-            <h2 className="text-[26px] sm:text-[32px] lg:text-[36px] leading-tight font-medium mb-5">
-              {activeTab.Title}
-            </h2>
+          </button>
 
-            <p className="text-[16px] sm:text-[18px] lg:text-[20px] text-gray-500 mb-8 leading-relaxed">
-              {activeTab.description}
-            </p>
+        ))}
 
-            <div className="space-y-4 mb-8">
-              {activeTab.list.map((point, index) => (
-                <div className="flex items-start gap-3 sm:gap-4" key={index}>
-                  <div className="bg-[#3D8EF4] rounded-full flex-shrink-0 flex items-center justify-center w-[30px] h-[30px] sm:w-[39px] sm:h-[39px] mt-1">
-                    <Check size={20} className="text-white" />
-                  </div>
+      </div>
 
-                  <p className="text-[16px] sm:text-[18px] lg:text-[20px] font-medium text-black leading-relaxed">
-                    {point}
-                  </p>
+      <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center max-w-[1340px] w-full mt-12 lg:mt-20">
+
+        <div className="w-full">
+
+          <h2 className="text-[26px] sm:text-[32px] lg:text-[36px] leading-tight font-medium mb-5">
+
+            {activeTab.Title}
+
+          </h2>
+
+          <p className="text-[16px] sm:text-[18px] lg:text-[20px] text-gray-500 mb-8 leading-relaxed">
+
+            {activeTab.description}
+
+          </p>
+
+          <div className="space-y-4 mb-8">
+
+            {activeTab.list.map((point, index) => (
+
+              <div className="flex items-start gap-3 sm:gap-4" key={index}>
+
+                <div className="bg-[#3D8EF4] rounded-full flex-shrink-0 flex items-center justify-center w-[30px] h-[30px] sm:w-[39px] sm:h-[39px] mt-1">
+
+                  <Check size={20} className="text-white" />
+
                 </div>
-              ))}
-            </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                to="/solutions/enterprise"
-                className="bg-[#0D7FFB] hover:bg-blue-600 px-7 py-4 rounded-lg shadow-gray-400 shadow-lg text-white text-[16px] font-medium text-center"
-              >
-                Learn More
-              </Link>
+                <p className="text-[16px] sm:text-[18px] lg:text-[20px] font-medium text-black leading-relaxed">
 
-              <button className="bg-white hover:bg-gray-200 px-7 py-4 rounded-lg shadow-gray-400 shadow-lg text-black text-[16px] font-medium">
-                Start Demo
-              </button>
-            </div>
+                  {point}
+
+                </p>
+
+              </div>
+
+            ))}
+
           </div>
 
-          <div className="w-full">
-            <img
-              src={activeTab.image}
-              alt={activeTab.Title}
-              className="w-full h-[280px] sm:h-[400px] lg:h-[542px] object-cover rounded-[15px]"
-            />
+          <div className="flex flex-col sm:flex-row gap-4">
+
+            <Link
+
+              to="/solutions/enterprise"
+
+              className="bg-[#0D7FFB] hover:bg-blue-600 px-7 py-4 rounded-lg shadow-gray-400 shadow-lg text-white text-[16px] font-medium text-center"
+
+            >
+
+              Learn More
+
+            </Link>
+
+            <button className="bg-white hover:bg-gray-200 px-7 py-4 rounded-lg shadow-gray-400 shadow-lg text-black text-[16px] font-medium">
+
+              Start Demo
+
+            </button>
+
           </div>
+
         </div>
-      </section>
+
+        <div className="w-full">
+
+          <img
+
+            src={activeTab.image}
+
+            alt={activeTab.Title}
+
+            className="w-full h-[280px] sm:h-[400px] lg:h-[542px] object-cover rounded-[15px]"
+
+          />
+
+        </div>
+
+      </div>
+
+    </section>
 
       {/* Why Choose Vaxterm Software Solutions */}
       <section className="flex flex-col items-center px-4">
@@ -312,11 +403,10 @@ const Solutions = () => {
               <button
                 key={i}
                 onClick={() => scrollTo(i)}
-                className={`transition-all duration-300 rounded-full border-2 ${
-                  activeDot === i
+                className={`transition-all duration-300 rounded-full border-2 ${activeDot === i
                     ? "w-4 h-4 bg-[#3B82F6] border-[#3B82F6]"
                     : "w-3 h-3 bg-white border-gray-300"
-                }`}
+                  }`}
               />
             ))}
           </div>
@@ -352,39 +442,35 @@ const Solutions = () => {
               return (
                 <div
                   key={index}
-                  className={`transition-all w-full duration-300 rounded-[15px] overflow-hidden border border-[#8081874F] ${
-                    isOpen ? "bg-[#0B1422]" : "bg-[#F8F9FA]"
-                  }`}
+                  className={`transition-all w-full duration-300 rounded-[15px] overflow-hidden border border-[#8081874F] ${isOpen ? "bg-[#0B1422]" : "bg-[#F8F9FA]"
+                    }`}
                 >
                   <button
                     onClick={() => setOpenIndex(isOpen ? -1 : index)}
                     className="w-full flex items-start sm:items-center gap-3 sm:gap-4 p-4 sm:p-5 text-left"
                   >
                     <div
-                      className={`flex-shrink-0 w-[38px] h-[38px] sm:size-[42px] rounded-lg flex items-center justify-center transition-colors ${
-                        isOpen
+                      className={`flex-shrink-0 w-[38px] h-[38px] sm:size-[42px] rounded-lg flex items-center justify-center transition-colors ${isOpen
                           ? "bg-[#3B82F6] text-white"
                           : "bg-gray-200 text-gray-600"
-                      }`}
+                        }`}
                     >
                       {isOpen ? <Minus size={20} /> : <Plus size={20} />}
                     </div>
 
                     <span
-                      className={`text-[15px] sm:text-lg font-semibold leading-snug ${
-                        isOpen ? "text-white" : "text-black"
-                      }`}
+                      className={`text-[15px] sm:text-lg font-semibold leading-snug ${isOpen ? "text-white" : "text-black"
+                        }`}
                     >
                       {item.question}
                     </span>
                   </button>
 
                   <div
-                    className={`pl-[65px] pr-4 sm:pl-20 sm:pr-6 transition-all duration-300 ease-in-out overflow-hidden ${
-                      isOpen
+                    className={`pl-[65px] pr-4 sm:pl-20 sm:pr-6 transition-all duration-300 ease-in-out overflow-hidden ${isOpen
                         ? "max-h-[260px] pb-6 opacity-100"
                         : "max-h-0 opacity-0"
-                    }`}
+                      }`}
                   >
                     <p className="text-gray-400 text-[14px] sm:text-[16px] leading-relaxed">
                       {item.answer}

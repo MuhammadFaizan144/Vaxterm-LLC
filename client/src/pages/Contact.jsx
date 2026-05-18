@@ -4,17 +4,17 @@ const ContactInfo = [
   {
     image: "/images/Contact/section2/mailUs.png",
     title: "Mail us 24/7",
-    details: "no-reply@pbminfo.com\nno-reply@pbmadmin.com",
+    details: "solutions@vaxterm.com\n+1 123 456 7890",
   },
   {
     image: "/images/Contact/section2/callUs.png",
     title: "Call us 24/7",
-    details: "Phone : (+55) 654 - 545 - 5418\nMobile : (+01) 654 - 545 - 1235",
+    details: "sales@vaxterm.com\n+1 123 456 7890",
   },
   {
     image: "/images/Contact/section2/ourlocation.png",
     title: "Our Locations",
-    details: "4821 Ride Top, Anch St, Alaska\n997998, USA main city.",
+    details: "poc@vaxterm.com\n+1 123 456 7890",
   },
 ];
 
@@ -62,7 +62,7 @@ const Contact = () => {
                   {item.title}
                 </h4>
 
-                <p className="text-[14px] sm:text-[15px] lg:text-[16px] leading-[26px] font-dm text-[#6E778C] whitespace-pre-line break-words">
+                <p className="text-[14px] text-center sm:text-[15px] lg:text-[16px] leading-[26px] font-dm text-[#6E778C] whitespace-pre-line break-words">
                   {item.details}
                 </p>
               </div>
