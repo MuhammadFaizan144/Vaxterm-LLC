@@ -2,18 +2,15 @@ import React from "react";
 
 const ContactInfo = [
   {
-    image: "/images/Contact/section2/mailUs.png",
-    title: "Mail us 24/7",
+    title: "Solutions",
     details: "solutions@vaxterm.com\n+1 123 456 7890",
   },
   {
-    image: "/images/Contact/section2/callUs.png",
-    title: "Call us 24/7",
+    title: "Hardware",
     details: "sales@vaxterm.com\n+1 123 456 7890",
   },
   {
-    image: "/images/Contact/section2/ourlocation.png",
-    title: "Our Locations",
+    title: "Procurement",
     details: "poc@vaxterm.com\n+1 123 456 7890",
   },
 ];
@@ -45,24 +42,20 @@ const Contact = () => {
 
       {/* Contact Info Cards */}
       <section className="max-w-[1327px] mx-auto px-4 sm:px-6 lg:px-4 py-10">
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 lg:gap-10">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 lg:gap-10 w-full">
           {ContactInfo.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col gap-6 bg-white py-8 sm:py-10 shadow-md rounded-[24px] sm:rounded-[30px] p-6 sm:p-8 min-h-[240px]"
+              className="flex  justify-center items-center flex-col gap-6 bg-white py-8 sm:py-10 shadow-md rounded-[24px] sm:rounded-[30px] p-6 sm:p-8 min-h-[240px]"
             >
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-[30px] h-[30px] object-contain"
-              />
+              
 
-              <div className="flex flex-col gap-5 text-left">
-                <h4 className="text-[20px] sm:text-[22px] lg:text-[26px] font-dm text-[#031B4E]">
+              <div className="flex flex-col items-center text-center gap-5 ">
+                <h4 className="text-[26px] sm:text-[30px] lg:text-[38px] font-semibold font-dm text-[#031B4E]">
                   {item.title}
                 </h4>
 
-                <p className="text-[14px] text-center sm:text-[15px] lg:text-[16px] leading-[26px] font-dm text-[#6E778C] whitespace-pre-line break-words">
+                <p className="text-[16px] sm:text-[18px] lg:text-[20px] leading-[26px] font-dm text-[#6E778C] whitespace-pre-line break-words">
                   {item.details}
                 </p>
               </div>
